@@ -53,7 +53,7 @@ export class GroupControl<V extends GroupValue = any>
     this.controlsChange.subscribe(this.updatePrivateControlsAndResetSubscribeGraph);
   }
 
-  override setValue = (value: V) => {
+  override setValue = (value: Partial<V>) => {
     /**
      * destroyGraph avoid multiple trigger group valueChange
      */
@@ -126,7 +126,7 @@ export class GroupControl<V extends GroupValue = any>
     this._controls = controls;
   };
 
-  private setValueToControls = (value: V) => {
+  private setValueToControls = (value: Partial<V>) => {
     Object.keys(this._controls).forEach((name) => {
       const hasKey = Object.prototype.hasOwnProperty.call(value, name);
       hasKey && this._controls[name].setValue(value[name]);
