@@ -1,6 +1,6 @@
 import { isEmpty } from 'lodash';
 
-import { CreateControlParams, Errors, ValidatorFn } from '../types/control';
+import { CreateControlParams, Errors, ValidatorFn } from '../types';
 import { AbstractControl } from '../controls/abstractControl';
 import { FieldControl } from '../controls/fieldControl';
 

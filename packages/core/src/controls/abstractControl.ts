@@ -2,7 +2,7 @@ import { Observable, Subject } from 'rxjs';
 import { switchMap, takeUntil } from 'rxjs/operators';
 import { isEmpty, isEqual } from 'lodash';
 
-import { AsyncValidatorFn, ControlBasicOptions, Errors, Valid, ValidatorFn } from '../types/control';
+import { AsyncValidatorFn, ControlBasicOptions, Errors, Valid, ValidatorFn } from '../types';
 import { getErrorsBy } from '../utils';
 
 import { GroupControl } from './groupControl';

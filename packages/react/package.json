@@ -1,0 +1,26 @@
+{
+  "name": "@yzw-rx-form/react",
+  "version": "1.0.0",
+  "description": "core",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c --watch"
+  },
+  "author": "laomeng",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "*",
+    "@yzw-rx-form/core": "workspace:*"
+  },
+  "devDependencies": {
+    "react": "*",
+    "@yzw-rx-form/core": "workspace:*"
+  }
+}

@@ -9,7 +9,7 @@ import {
   ListChildControls,
   ListValue,
   Valid,
-} from '../types/control';
+} from '../types';
 import { createControl } from '../utils';
 
 import { AbstractControl } from './abstractControl';

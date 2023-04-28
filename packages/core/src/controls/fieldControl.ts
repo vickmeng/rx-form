@@ -1,4 +1,4 @@
-import { FormControlOptions } from '../types/control';
+import { FormControlOptions } from '../types';
 
 import { AbstractControl } from './abstractControl';
 
