@@ -6,11 +6,10 @@ export default {
     file: 'dist/index.js',
     format: 'es',
   },
+  external: ['lodash', 'rxjs'],
   plugins: [
-
     typescript({
       tsconfig: './tsconfig.json',
     }),
-
   ],
 };

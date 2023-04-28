@@ -16,6 +16,12 @@
   "author": "laomeng",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.0.0"
+  },
+  "peerDependencies": {
+    "rxjs": "*"
+  },
+  "devDependencies": {
     "rxjs": "*"
   }
 }

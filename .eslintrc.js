@@ -5,7 +5,8 @@ module.exports = {
     jest: true,
   },
   extends: [
-    "eslint:recommended",
+    'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
     'standard',
@@ -14,12 +15,12 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      // jsx: true,
+      jsx: true,
     },
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'sort-class-members', 'react-hooks'],
   rules: {
     'no-alert': 2, // 禁止使用alert confirm prompt
     'no-console': 2, // 禁止使用console
@@ -62,9 +63,25 @@ module.exports = {
     'space-before-function-paren': 0,
     'space-in-parens': 0,
     'func-call-spacing': 0,
+    'sort-class-members/sort-class-members': [
+      2,
+      {
+        order: [
+          '[static-properties]',
+          '[static-methods]',
+          '[getters]',
+          '[conventional-private-properties]',
+          'constructor',
+          '[arrow-function-properties]',
+        ],
+      },
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };
