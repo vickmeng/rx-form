@@ -61,7 +61,7 @@ export interface GroupInternalProps<V extends GroupValue> {
   name?: string;
   disabled: boolean;
   control: GroupControl<V>;
-  childControls: GroupChildControls;
+  childControls?: GroupChildControls;
 }
 
 export type GroupWithNameProps<V extends GroupValue> = ItemWithNameProps<GroupInternalProps<V>>;
@@ -80,7 +80,7 @@ export interface ListInternalProps<V> {
   name?: string;
   control: ListControl<V>;
   disabled: boolean;
-  childControls: ListChildControls<V>;
+  childControls?: ListChildControls<V>;
 }
 
 export type ListWithNameProps<V> = ItemWithNameProps<ListInternalProps<V>>;
