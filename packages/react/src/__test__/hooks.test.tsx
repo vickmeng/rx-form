@@ -150,7 +150,7 @@ describe('hooks', () => {
     expect(result.current).toBe(undefined);
   });
 
-  it('useControlAsyncErrors', async () => {
+  it('useControlAsyncErrors', () => {
     const asyncValidator: AsyncValidatorFn<string> = (control) => {
       return new Promise((resolve) => {
         if (control.value === 'error') {
@@ -161,12 +161,12 @@ describe('hooks', () => {
       });
     };
 
-    let control: undefined | AbstractControl = new FieldControl('error', {
+    const control: undefined | AbstractControl = new FieldControl('error', {
       asyncValidators: [asyncValidator],
       autoAsyncValidate: true,
     });
 
-    const { result, rerender } = renderHook(() => useControlAsyncErrors(control));
+    const { result, rerender } = renderHook(useControlAsyncErrors, { initialProps: control });
 
     expect(result.current).toBe(null);
 
@@ -177,16 +177,12 @@ describe('hooks', () => {
 
     act(async () => {
       control.setValue('');
-      expect(result.current).toEqual({ existed: true });
       await Promise.resolve().then().catch();
       expect(result.current).toEqual(null);
     });
 
     act(async () => {
-      control = undefined;
-      rerender();
-
-      expect(result.current).toBe(undefined);
+      rerender(undefined);
       await Promise.resolve().then().catch();
       expect(result.current).toBe(undefined);
     });

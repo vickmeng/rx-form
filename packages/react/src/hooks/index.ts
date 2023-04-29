@@ -103,9 +103,7 @@ export const useControlAsyncErrors = (control?: AbstractControl) => {
   const [asyncErrors, setAsyncErrors] = useState(control?.asyncErrors);
 
   useEffect(() => {
-    const subscriber = control?.asyncErrorsChange.subscribe((err) => {
-      setAsyncErrors(err);
-    });
+    const subscriber = control?.asyncErrorsChange.subscribe(setAsyncErrors);
     return () => {
       subscriber?.unsubscribe();
     };
