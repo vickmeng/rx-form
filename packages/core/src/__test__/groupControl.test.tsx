@@ -1,5 +1,4 @@
-import { GroupControl } from '../controls/groupControl';
-import { requiredValidator } from '../validators';
+import { GroupControl, requiredValidator } from '../index';
 
 describe('groupControl', () => {
   it('should be created correctly', () => {

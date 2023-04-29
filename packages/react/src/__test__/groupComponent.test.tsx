@@ -2,8 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { GroupControl } from '@yzw-rx-form/core';
 
-import { Field } from '../items/field';
-import { Group } from '../items/group';
+import { Field, Group } from '../index';
 
 describe('<Group/>', () => {
   it('should render <Group/>', () => {

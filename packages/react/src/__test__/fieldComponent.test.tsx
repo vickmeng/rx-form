@@ -2,7 +2,7 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import { FieldControl } from '@yzw-rx-form/core';
 
-import { Field } from '../items/field';
+import { Field } from '../index';
 
 describe('<Field/>', () => {
   it('should render <Field/>', () => {

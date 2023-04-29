@@ -1,7 +1,4 @@
-import { ListControl } from '../controls/listControl';
-import { GroupControl } from '../controls/groupControl';
-import { FieldControl } from '../controls/fieldControl';
-import { requiredValidator } from '../validators';
+import { ListControl, GroupControl, FieldControl, requiredValidator } from '../index';
 
 describe('listControl', () => {
   it('should be created correctly', () => {

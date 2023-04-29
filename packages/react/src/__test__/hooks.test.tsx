@@ -9,7 +9,7 @@ import {
   useControlErrors,
   useControlValid,
   useControlValue,
-} from '../hooks';
+} from '../index';
 
 describe('hooks', () => {
   it('useControlValue', () => {

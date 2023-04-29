@@ -2,8 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { ListControl } from '@yzw-rx-form/core';
 
-import { Field } from '../items/field';
-import { List } from '../items/list';
+import { Field, List } from '../index';
 
 describe('<List/>', () => {
   it('should render <List/>', () => {

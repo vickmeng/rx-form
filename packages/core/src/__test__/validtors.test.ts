@@ -7,9 +7,9 @@ import {
   minLengthValidator,
   maxLengthValidator,
   patternValidator,
-} from '../validators';
-import { FieldControl } from '../controls/fieldControl';
-import { ListControl } from '../controls/listControl';
+  FieldControl,
+  ListControl,
+} from '../index';
 
 describe('validators', () => {
   describe('minValidator', () => {

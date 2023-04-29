@@ -2,10 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { GroupControl, ListControl, requiredValidator } from '@yzw-rx-form/core';
 
-import { Field } from '../items/field';
-import { Group } from '../items/group';
-import { Error } from '../items/error';
-import { List } from '../items/list';
+import { Field, Group, Error, List } from '../index';
 
 describe('nest components', () => {
   it('should render correctly', () => {

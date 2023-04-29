@@ -1,5 +1,4 @@
-import { FieldControl } from '../controls/fieldControl';
-import { AbstractControl } from '../controls/abstractControl';
+import { FieldControl, AbstractControl } from '../index';
 
 const asyncValidator = (control: AbstractControl<string>) => {
   if (control.value === 'wrong') {
