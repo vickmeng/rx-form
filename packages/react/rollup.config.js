@@ -9,7 +9,7 @@ export default {
   external: ['react'],
   plugins: [
     typescript({
-      tsconfig: './tsconfig.json',
+      tsconfig: '../../tsconfig.json',
     }),
   ],
 };

@@ -9,7 +9,7 @@ export default {
   external: ['lodash', 'rxjs'],
   plugins: [
     typescript({
-      tsconfig: './tsconfig.json',
+      tsconfig: '../../tsconfig.json',
     }),
   ],
 };
