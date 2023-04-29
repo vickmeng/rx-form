@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:c": "pnpm run test --coverage"
   },
   "npmClient": "pnpm",
   "keywords": [],
@@ -34,6 +35,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.1",
     "@types/node": "^18.16.2",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",

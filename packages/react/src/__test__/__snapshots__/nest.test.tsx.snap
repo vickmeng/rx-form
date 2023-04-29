@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`nest components should render correctly 1`] = `
+<DocumentFragment>
+  <input
+    readonly=""
+    value=""
+  />
+  至少填一名家庭成员
+  <input
+    readonly=""
+    value="Tom"
+  />
+  <input
+    readonly=""
+    value="13133333333"
+  />
+</DocumentFragment>
+`;

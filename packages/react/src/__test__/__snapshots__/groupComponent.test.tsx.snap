@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Group/> should render <Group/> 1`] = `
+<DocumentFragment>
+  <input
+    value="TOM"
+  />
+  <input
+    value="No.1,Chaowai Street,Chaoyang District,Beijing City"
+  />
+</DocumentFragment>
+`;

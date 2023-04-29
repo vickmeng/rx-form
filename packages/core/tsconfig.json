@@ -18,7 +18,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "noEmit": true,
-    "declaration": true
+    "declaration": true,
   },
   "include": [
     "src/**/*",
