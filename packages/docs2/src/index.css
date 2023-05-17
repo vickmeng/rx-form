@@ -1,0 +1,43 @@
+
+
+/*ul,ol{padding-left: 10px }*/
+a {
+    text-decoration: none;
+}
+body {margin: 0}
+.divide {
+    background: linear-gradient(45deg, #4c00b7 30%, #ee0a90 90%);
+}
+
+.divide.vertical {
+    margin: 0 40px;
+    width: 3px;
+    height: 40px;
+    background: #4c00b7;
+}
+
+.page {
+    padding: 20px 160px;
+}
+
+.page > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.page a {
+    color: #4c00b7;
+}
+
+pre.code {
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+.MuiButton-containedPrimary{
+    /*background: linear-gradient(45deg, #4c00b7 30%, #ee0a90 90%);*/
+}
+
+.MuiButton-containedPrimary .MuiButton-label{
+    color:rgba(255,255,255,0.9);
+}
