@@ -19,10 +19,12 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "declaration": true,
-    "jsx": "react-jsx"
+    "jsx": "react"
   },
   "include": [
-    "packages/**/*",
+    "packages/core/**/*",
+    "packages/react/**/*",
+    "packages/docs/**/*",
   ],
   "exclude": [
     "node_modules",
