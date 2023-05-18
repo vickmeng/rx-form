@@ -13,7 +13,7 @@ export type {
   FormGroupControlsConfig,
   FormListControlsConfig,
   ValidatorFn,
-  AsyncValidatorFn,
+  // AsyncValidatorFn,
   Errors,
   GroupChildControls,
   ListChildControls,

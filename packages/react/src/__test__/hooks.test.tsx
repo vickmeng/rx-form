@@ -1,8 +1,8 @@
 import { act, renderHook } from '@testing-library/react';
-import { FieldControl, AbstractControl, requiredValidator, GroupControl, AsyncValidatorFn } from '@yzw-rx-form/core';
+import { FieldControl, AbstractControl, requiredValidator, GroupControl } from '@yzw-rx-form/core';
 
 import {
-  useControlAsyncErrors,
+  // useControlAsyncErrors,
   useControlControls,
   useControlDirty,
   useControlDisabled,
@@ -150,41 +150,41 @@ describe('hooks', () => {
     expect(result.current).toBe(undefined);
   });
 
-  it('useControlAsyncErrors', () => {
-    const asyncValidator: AsyncValidatorFn<string> = (control) => {
-      return new Promise((resolve) => {
-        if (control.value === 'error') {
-          resolve({ existed: true });
-        } else {
-          resolve(null);
-        }
-      });
-    };
-
-    const control: undefined | AbstractControl = new FieldControl('error', {
-      asyncValidators: [asyncValidator],
-      autoAsyncValidate: true,
-    });
-
-    const { result, rerender } = renderHook(useControlAsyncErrors, { initialProps: control });
-
-    expect(result.current).toBe(null);
-
-    act(async () => {
-      await Promise.resolve().then().catch();
-      expect(result.current).toEqual({ existed: true });
-    });
-
-    act(async () => {
-      control.setValue('');
-      await Promise.resolve().then().catch();
-      expect(result.current).toEqual(null);
-    });
-
-    act(async () => {
-      rerender(undefined);
-      await Promise.resolve().then().catch();
-      expect(result.current).toBe(undefined);
-    });
-  });
+  // it('useControlAsyncErrors', () => {
+  //   const asyncValidator: AsyncValidatorFn<string> = (control) => {
+  //     return new Promise((resolve) => {
+  //       if (control.value === 'error') {
+  //         resolve({ existed: true });
+  //       } else {
+  //         resolve(null);
+  //       }
+  //     });
+  //   };
+  //
+  //   const control: undefined | AbstractControl = new FieldControl('error', {
+  //     asyncValidators: [asyncValidator],
+  //     autoAsyncValidate: true,
+  //   });
+  //
+  //   const { result, rerender } = renderHook(useControlAsyncErrors, { initialProps: control });
+  //
+  //   expect(result.current).toBe(null);
+  //
+  //   act(async () => {
+  //     await Promise.resolve().then().catch();
+  //     expect(result.current).toEqual({ existed: true });
+  //   });
+  //
+  //   act(async () => {
+  //     control.setValue('');
+  //     await Promise.resolve().then().catch();
+  //     expect(result.current).toEqual(null);
+  //   });
+  //
+  //   act(async () => {
+  //     rerender(undefined);
+  //     await Promise.resolve().then().catch();
+  //     expect(result.current).toBe(undefined);
+  //   });
+  // });
 });

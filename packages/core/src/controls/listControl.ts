@@ -42,7 +42,7 @@ export class ListControl<V = any>
    * has list level error or has controls with error
    */
   override _noError = () => {
-    return !(this.errors || this.asyncErrors || this._controls.some((control) => !control._noError()));
+    return !(this.errors || this._controls.some((control) => !control._noError()));
   };
 
   constructor(controlsConfig: FormListControlsConfig, options: FormListOptions = {}) {

@@ -18,17 +18,18 @@ export type Errors = {
   [key: string]: any;
 };
 
-export type Valid = boolean | 'pending';
+// export type Valid = boolean | 'pending';
+export type Valid = boolean;
 
 export type ValidatorFn<V = any> = (control: AbstractControl<V>) => Errors | null;
-export type AsyncValidatorFn<V = any> = (control: AbstractControl<V>) => Promise<Errors | null>;
+// export type AsyncValidatorFn<V = any> = (control: AbstractControl<V>) => Promise<Errors | null>;
 
 export interface ControlBasicOptions {
   disabled?: boolean;
   autoValidate?: boolean;
   validators?: ValidatorFn[];
   autoAsyncValidate?: boolean;
-  asyncValidators?: AsyncValidatorFn[];
+  // asyncValidators?: AsyncValidatorFn[];
   dirty?: boolean;
   autoMarkAsDirty?: boolean;
 }

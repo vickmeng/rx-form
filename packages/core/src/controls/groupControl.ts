@@ -41,7 +41,7 @@ export class GroupControl<V extends GroupValue = any>
    * has group level error or has invalid controls
    */
   override _noError = () => {
-    return !(this.errors || this.asyncErrors || Object.values(this._controls).some((control) => !control._noError()));
+    return !(this.errors || Object.values(this._controls).some((control) => !control._noError()));
   };
 
   constructor(controlsConfig: FormGroupControlsConfig, options: FormGroupOptions = {}) {

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">99.25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>134/135</span>
+                <span class='fraction'>135/135</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>36/36</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">99.25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>134/135</span>
+                <span class='fraction'>135/135</span>
             </div>
         
             
@@ -202,17 +202,17 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">100x</span>
-<span class="cline-any cline-yes">100x</span>
-<span class="cline-any cline-yes">100x</span>
-<span class="cline-any cline-yes">85x</span>
-<span class="cline-any cline-yes">73x</span>
-<span class="cline-any cline-yes">85x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">76x</span>
+<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-yes">76x</span>
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-yes">85x</span>
-<span class="cline-any cline-yes">100x</span>
-<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">76x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">91x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">14x</span>
@@ -300,21 +300,21 @@
 <span class="cline-any cline-yes">15x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">10x</span>
@@ -434,22 +434,22 @@ export const useControlErrors = (control?: AbstractControl) =&gt; {
   return errors;
 };
 &nbsp;
-export const useControlAsyncErrors = (control?: AbstractControl) =&gt; {
-  const [asyncErrors, setAsyncErrors] = useState(control?.asyncErrors);
-&nbsp;
-  useEffect(() =&gt; {
-    const subscriber = control?.asyncErrorsChange.subscribe(setAsyncErrors);
-    return () =&gt; {
-      subscriber?.unsubscribe();
-    };
-  }, [control]);
-&nbsp;
-  useUpdateEffect(() =&gt; {
-<span class="cstat-no" title="statement not covered" >    setAsyncErrors(control?.asyncErrors);</span>
-  }, [control]);
-&nbsp;
-  return asyncErrors;
-};
+// export const useControlAsyncErrors = (control?: AbstractControl) =&gt; {
+//   const [asyncErrors, setAsyncErrors] = useState(control?.asyncErrors);
+//
+//   useEffect(() =&gt; {
+//     const subscriber = control?.asyncErrorsChange.subscribe(setAsyncErrors);
+//     return () =&gt; {
+//       subscriber?.unsubscribe();
+//     };
+//   }, [control]);
+//
+//   useUpdateEffect(() =&gt; {
+//     setAsyncErrors(control?.asyncErrors);
+//   }, [control]);
+//
+//   return asyncErrors;
+// };
 &nbsp;
 export const useControlControls = &lt;C extends GroupControl | ListControl&gt;(control?: C) =&gt; {
   const [controls, setControls] = useState&lt;C['controls'] | undefined&gt;(control?.controls);
@@ -475,7 +475,7 @@ export const useControlControls = &lt;C extends GroupControl | ListControl&gt;(c
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-04-29T14:51:31.551Z
+                at 2023-05-18T02:22:03.981Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
