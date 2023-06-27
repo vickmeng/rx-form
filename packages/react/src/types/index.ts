@@ -11,15 +11,15 @@ import {
   GroupValue,
 } from '@yzw-rx-form/core';
 
-export interface IItemBasicProps<P> {
+export interface ItemBasicProps<P> {
   children: (props: P) => ReactElement;
 }
 
-export interface ItemWithNameProps<P> extends IItemBasicProps<P> {
+export interface ItemWithNameProps<P> extends ItemBasicProps<P> {
   name: string;
 }
 
-export interface ItemWithControlProps<P, C extends AbstractControl<any>> extends IItemBasicProps<P> {
+export interface ItemWithControlProps<P, C extends AbstractControl<any>> extends ItemBasicProps<P> {
   control: C;
 }
 
