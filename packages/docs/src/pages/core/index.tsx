@@ -16,6 +16,7 @@ const Core = () => {
       </Typography>
 
       <Typography paragraph>
+        Controller由@yzw-rx-form/core提供，是表单状态的核心
         Controller是数据的源头，它为视图提供一系列可观察对象，以及操作数据的方法，使用者可以通过订阅这些可观察对象获得如：value，errors等状态。
       </Typography>
 
@@ -30,7 +31,7 @@ const Core = () => {
       </Typography>
 
       <Typography paragraph variant={'h4'}>
-        Components
+        Components由@yzw-rx-form/react提供，是对react框架的适配器
       </Typography>
 
       <Typography paragraph>
