@@ -1,17 +1,17 @@
-import React from "react";
-import { Typography } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
 const Core = () => {
   return (
     <div className="page">
-      <Typography paragraph variant={"h2"}>
+      <Typography paragraph variant={'h2'}>
         核心概念
       </Typography>
 
-      <Typography paragraph>react-observable-form主要包含两个概念：Controller与Component。</Typography>
+      <Typography paragraph>rx-form主要包含两个概念：Controller与Component。</Typography>
 
-      <Typography paragraph variant={"h4"}>
+      <Typography paragraph variant={'h4'}>
         Controllers
       </Typography>
 
@@ -29,7 +29,7 @@ const Core = () => {
         </ul>
       </Typography>
 
-      <Typography paragraph variant={"h4"}>
+      <Typography paragraph variant={'h4'}>
         Components
       </Typography>
 
@@ -41,16 +41,16 @@ const Core = () => {
 
       <Typography paragraph>
         <ul>
-          <li> {"<Field/>"}：FieldControl的订阅器</li>
-          <li> {"<Group/>"}：GroupControl的订阅器</li>
-          <li> {"<List/>"}：ListControl的订阅器</li>
+          <li> {'<Field/>'}：FieldControl的订阅器</li>
+          <li> {'<Group/>'}：GroupControl的订阅器</li>
+          <li> {'<List/>'}：ListControl的订阅器</li>
         </ul>
       </Typography>
 
       <br />
 
       <Typography paragraph>
-        可以查看<Link to={"/field"}>基础使用</Link>更直观得进行学习
+        可以查看<Link to={'/field'}>基础使用</Link>更直观得进行学习
       </Typography>
     </div>
   );

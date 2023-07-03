@@ -1,13 +1,13 @@
-import React from "react";
-import { Typography } from "@material-ui/core";
+import React from 'react';
+import { Typography } from '@material-ui/core';
 
-import DemoCard from "../../components/demoCard";
-import UseRxjsDemo from "../../demo/useRxjsDemo";
+import DemoCard from '../../components/demoCard';
+import UseRxjsDemo from '../../demo/useRxjsDemo';
 
 const UseRxPage = () => {
   return (
-    <div className={"page"}>
-      <Typography paragraph variant={"h2"}>
+    <div className={'page'}>
+      <Typography paragraph variant={'h2'}>
         与Rxjs
       </Typography>
 
@@ -20,31 +20,27 @@ const UseRxPage = () => {
       <DemoCard
         demo={<UseRxjsDemo />}
         code={
-          'import React, { useEffect, useRef } from "react";\n' +
-          'import { TextField } from "@material-ui/core";\n' +
-          'import { debounceTime } from "rxjs/operators";\n' +
-          "\n" +
-          "const UseRxjsDemo = () => {\n" +
+          'const UseRxjsDemo = () => {\n' +
           '  const controlRef = useRef(new FieldControl<string>(""));\n' +
-          "\n" +
-          "  useEffect(() => {\n" +
-          "    const subscription = controlRef.current.valueChange.pipe(debounceTime(500)).subscribe((v) => {\n" +
+          '\n' +
+          '  useEffect(() => {\n' +
+          '    const subscription = controlRef.current.valueChange.pipe(debounceTime(500)).subscribe((v) => {\n' +
           '      console.log("value change", v);\n' +
-          "    });\n" +
-          "\n" +
-          "    return () => {\n" +
-          "      subscription.unsubscribe();\n" +
-          "    };\n" +
-          "  }, []);\n" +
-          "\n" +
-          "  return (\n" +
-          "    <Field control={controlRef.current}>\n" +
-          "      {({ value, setValue }) => {\n" +
+          '    });\n' +
+          '\n' +
+          '    return () => {\n' +
+          '      subscription.unsubscribe();\n' +
+          '    };\n' +
+          '  }, []);\n' +
+          '\n' +
+          '  return (\n' +
+          '    <Field control={controlRef.current}>\n' +
+          '      {({ value, setValue }) => {\n' +
           '        return <TextField label="防抖500ms" value={value} onChange={(e) => setValue(e.target.value)} />;\n' +
-          "      }}\n" +
-          "    </Field>\n" +
-          "  );\n" +
-          "}"
+          '      }}\n' +
+          '    </Field>\n' +
+          '  );\n' +
+          '}'
         }
       />
     </div>

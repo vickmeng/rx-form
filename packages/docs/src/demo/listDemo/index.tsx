@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import { Avatar, Button, TextField } from '@material-ui/core';
-
 import './index.less';
-import { Field } from '@yzw-rx-form/react';
+import { Field, List } from '@yzw-rx-form/react';
 import { ListControl } from '@yzw-rx-form/core';
 
 const ListDemo = () => {

@@ -1,23 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import GitHubIcon from "@material-ui/icons/GitHub";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
-import { BasicWithAntd, BasicWithMui } from "../../demo/basic";
-import UseRxjsDemo from "../../demo/useRxjsDemo";
-import flowImg from "../../assets/img/flow.png";
-import reactImg from "../../assets/img/react.svg";
-import rxImg from "../../assets/img/rx.png";
+import { BasicWithAntd, BasicWithMui } from '../../demo/basic';
+import UseRxjsDemo from '../../demo/useRxjsDemo';
+import flowImg from '../../assets/img/flow.png';
+import reactImg from '../../assets/img/react.svg';
+import rxImg from '../../assets/img/rx.png';
 
-import "./index.less";
+import './index.less';
 
 const Home = () => {
   return (
-    <main className={"home"}>
-      <div className={"banner"}>
-        <img src={rxImg} className={"rxImg"} />
-        <img src={reactImg} className={"reactImg"} />
+    <main className={'home'}>
+      <div className={'banner'}>
+        <img src={rxImg} className={'rxImg'} />
+        <img src={reactImg} className={'reactImg'} />
 
         <nav>
           <div>
@@ -35,8 +35,8 @@ const Home = () => {
           </div>
         </nav>
 
-        <h1>React Observable Form</h1>
-        <h2>可自由订阅状态变化的React响应式表单方案</h2>
+        <h1>rx-form</h1>
+        <h2>跨平台，跨框架，高度灵活的响应式表单方案</h2>
         <div>
           <Link className="quick-start link" to="/quick-start">
             快速开始
@@ -57,11 +57,11 @@ const Home = () => {
         <div className="demo-wrapper">
           <div className="code">
             <SyntaxHighlighter language="javascript" style={atomOneLight}>
-              {"valueChange\n" +
-                ".pipe(debounceTime(500))\n" +
-                ".subscribe((v) => {\n" +
+              {'valueChange\n' +
+                '.pipe(debounceTime(500))\n' +
+                '.subscribe((v) => {\n' +
                 '  console.log("value change", v);\n' +
-                "});"}
+                '});'}
             </SyntaxHighlighter>
           </div>
           <div className="demo">
