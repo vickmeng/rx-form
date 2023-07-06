@@ -13,7 +13,7 @@ export function Field<V>(props: FieldProps<V>) {
   const parent = useContext(ParentFormContext);
 
   /**
-   * Two and only two way can get formControl,from props or 、Context
+   * Two ways can get formControl,from props or Context
    */
   const { name = undefined, control } = isFieldWithNameProps<V>(props)
     ? { name: props.name, control: parent!.get<FieldControl<V>>(props.name) }
@@ -38,7 +38,6 @@ export function Field<V>(props: FieldProps<V>) {
     markAsDirty: control.markAsDirty,
     markAsPristine: control.markAsPristine,
     validateAndUpdateErrors: control.validateAndUpdateErrors,
-    asyncValidateAndUpdateErrors: control.asyncValidateAndUpdateErrors,
     errors,
     // asyncErrors,
     disabled,
