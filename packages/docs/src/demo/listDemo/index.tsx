@@ -5,12 +5,12 @@ import { Field, List } from '@yzw-rx-form/react';
 import { ListControl } from '@yzw-rx-form/core';
 
 const ListDemo = () => {
-  const controlRef = useRef(new ListControl([['Vick'], ['Tom'], ['Jack'], ['Lulu']]));
+  const myControl = useRef(new ListControl([['Vick'], ['Tom'], ['Jack'], ['Lulu']])).current;
 
   return (
     <>
       <ul className="list-demo__ul">
-        <List control={controlRef.current}>
+        <List control={myControl}>
           {({ childControls, ...rest }) => {
             return (
               <>
@@ -37,7 +37,21 @@ const ListDemo = () => {
         color={'primary'}
         onClick={() => {
           // eslint-disable-next-line no-console
-          console.log(controlRef.current.value);
+          myControl.push(['xxxx']);
+        }}
+      >
+        加一个
+      </Button>
+
+      <br></br>
+      <br></br>
+
+      <Button
+        variant="contained"
+        color={'primary'}
+        onClick={() => {
+          // eslint-disable-next-line no-console
+          console.log(myControl.value);
         }}
       >
         在控制台中打印数据
