@@ -1,15 +1,15 @@
-import React from "react";
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
+import React from 'react';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 
 const FieldApiPage = () => {
   return (
-    <div className={"page"}>
-      <Typography paragraph variant={"h2"}>
-        {"<Field<V> ...props/>"}
+    <div className={'page'}>
+      <Typography paragraph variant={'h2'}>
+        {'<Field<V> ...props/>'}
       </Typography>
 
-      <Typography paragraph variant={"h4"}>
-        props:{"FieldProps<V>"}
+      <Typography paragraph variant={'h4'}>
+        props:{'FieldProps<V>'}
       </Typography>
 
       <TableContainer component={Paper}>
@@ -50,7 +50,7 @@ const FieldApiPage = () => {
                 绑定的controller，与name互斥
               </TableCell>
               <TableCell component="th" scope="row">
-                {"FieldControl<V = any>"}
+                {'FieldControl<V = any>'}
               </TableCell>
               <TableCell component="th" scope="row">
                 否
@@ -67,7 +67,7 @@ const FieldApiPage = () => {
                 内容
               </TableCell>
               <TableCell component="th" scope="row">
-                (props: <a href={"#fieldInternalProps"}>{"FieldInternalProps<V>"}</a>) {`=>`} ReactElement
+                (props: <a href={'#fieldInternalProps'}>{'FieldInternalProps<V>'}</a>) {'=>'} ReactElement
               </TableCell>
               <TableCell component="th" scope="row">
                 是
@@ -81,8 +81,8 @@ const FieldApiPage = () => {
       </TableContainer>
       <br />
 
-      <Typography paragraph variant={"h4"} id={"fieldInternalProps"}>
-        {"FieldInternalProps<V>"}
+      <Typography paragraph variant={'h4'} id={'fieldInternalProps'}>
+        {'FieldInternalProps<V>'}
       </Typography>
 
       <TableContainer component={Paper}>
@@ -116,7 +116,7 @@ const FieldApiPage = () => {
                 值
               </TableCell>
               <TableCell component="th" scope="row">
-                {"<V>"}
+                {'<V>'}
               </TableCell>
             </TableRow>
 
@@ -236,7 +236,7 @@ const FieldApiPage = () => {
                 错误描述
               </TableCell>
               <TableCell component="th" scope="row">
-                {"{[key: string]: any}  |  null"}
+                {'{[key: string]: any}  |  null'}
               </TableCell>
             </TableRow>
           </TableBody>
