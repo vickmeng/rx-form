@@ -1,17 +1,15 @@
-import React from "react";
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
-
-import { ListInternalProps } from "../../../packages/types/items";
+import React from 'react';
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@material-ui/core';
 
 const ListApiPage = () => {
   return (
-    <div className={"page"}>
-      <Typography paragraph variant={"h2"}>
-        {"<List ...props/>"}
+    <div className={'page'}>
+      <Typography paragraph variant={'h2'}>
+        {'<List ...props/>'}
       </Typography>
 
-      <Typography paragraph variant={"h4"}>
-        props:{"ListProps"}
+      <Typography paragraph variant={'h4'}>
+        props:{'ListProps'}
       </Typography>
 
       <TableContainer component={Paper}>
@@ -69,7 +67,7 @@ const ListApiPage = () => {
                 内容
               </TableCell>
               <TableCell component="th" scope="row">
-                (props: <a href={"#ListInternalProps"}>ListInternalProps</a>) {`=>`} ReactElement
+                (props: <a href={'#ListInternalProps'}>ListInternalProps</a>) {'=>'} ReactElement
               </TableCell>
               <TableCell component="th" scope="row">
                 是
@@ -83,7 +81,7 @@ const ListApiPage = () => {
       </TableContainer>
       <br />
 
-      <Typography paragraph variant={"h4"} id={"ListInternalProps"}>
+      <Typography paragraph variant={'h4'} id={'ListInternalProps'}>
         ListInternalProps
       </Typography>
 
@@ -118,7 +116,7 @@ const ListApiPage = () => {
                 值
               </TableCell>
               <TableCell component="th" scope="row">
-                {"Record<string, any>"}
+                {'Record<string, any>'}
               </TableCell>
             </TableRow>
 
@@ -202,7 +200,7 @@ const ListApiPage = () => {
                 错误描述
               </TableCell>
               <TableCell component="th" scope="row">
-                {"{[key: string]: any}  |  null"}
+                {'{[key: string]: any}  |  null'}
               </TableCell>
             </TableRow>
             <TableRow>
@@ -213,7 +211,7 @@ const ListApiPage = () => {
                 子controller集合
               </TableCell>
               <TableCell component="th" scope="row">
-                {"AbstractControl<any>[]"}
+                {'AbstractControl<any>[]'}
               </TableCell>
             </TableRow>
           </TableBody>

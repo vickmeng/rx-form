@@ -1,6 +1,5 @@
-import React, { ChangeEvent } from "react";
-
-import { FieldInternalProps } from "../../../packages/types/items";
+import React, { ChangeEvent } from 'react';
+import { FieldInternalProps } from '@yzw-rx-form/react';
 
 const Input = (props: FieldInternalProps) => {
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
