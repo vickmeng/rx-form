@@ -11,9 +11,7 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "watch": "rollup -c --watch",
-    "test": "jest -c",
-    "test:c": "pnpm run test --coverage"
+    "watch": "rollup -c --watch"
   },
   "author": "laomeng",
   "license": "ISC",
