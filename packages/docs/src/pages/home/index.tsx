@@ -29,9 +29,9 @@ const Home = () => {
             </a>
           </div>
           <div>
-            <a href="https://github.com/vickmeng/react-observable-form">
-              <GitHubIcon />
-            </a>
+            {/* <a href="https://github.com/vickmeng/react-observable-form"> */}
+            {/*  <GitHubIcon /> */}
+            {/* </a> */}
           </div>
         </nav>
 
