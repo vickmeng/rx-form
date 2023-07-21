@@ -14,10 +14,16 @@ const useUpdateEffect: typeof useEffect = (effect, deps) => {
   }, deps);
 };
 
-export const useControlValue = <C extends AbstractControl>(
-  control?: C
-): C extends AbstractControl ? C['value'] : undefined => {
-  const [value, setValue] = useState<C['value'] | undefined>(control?.value);
+/**
+ * useControlValue start
+ */
+function useControlValue(): undefined;
+// eslint-disable-next-line no-redeclare
+function useControlValue<C extends AbstractControl>(control: C): C['value'];
+
+// eslint-disable-next-line no-redeclare
+function useControlValue(control?: AbstractControl) {
+  const [value, setValue] = useState(control?.value);
 
   useEffect(() => {
     const subscriber = control?.valueChange.subscribe(setValue);
@@ -31,9 +37,19 @@ export const useControlValue = <C extends AbstractControl>(
   }, [control]);
 
   return value;
-};
+}
+/**
+ * useControlValue end
+ */
 
-export const useControlDisabled = (control?: AbstractControl): boolean => {
+/**
+ * useControlDisabled start
+ */
+function useControlDisabled(): false;
+// eslint-disable-next-line no-redeclare
+function useControlDisabled(control: AbstractControl): boolean;
+// eslint-disable-next-line no-redeclare
+function useControlDisabled(control?: AbstractControl): boolean {
   const [disabled, setDisabled] = useState<boolean>(!!control?.disabled);
 
   useEffect(() => {
@@ -48,9 +64,19 @@ export const useControlDisabled = (control?: AbstractControl): boolean => {
   }, [control]);
 
   return disabled;
-};
+}
+/**
+ * useControlDisabled end
+ */
 
-export const useControlDirty = (control?: AbstractControl): boolean => {
+/**
+ * useControlDirty start
+ */
+function useControlDirty(): false;
+// eslint-disable-next-line no-redeclare
+function useControlDirty(control: AbstractControl): boolean;
+// eslint-disable-next-line no-redeclare
+function useControlDirty(control?: AbstractControl): boolean {
   const [dirty, setDirty] = useState<boolean>(!!control?.dirty);
 
   useEffect(() => {
@@ -65,9 +91,19 @@ export const useControlDirty = (control?: AbstractControl): boolean => {
   }, [control]);
 
   return dirty;
-};
+}
+/**
+ * useControlDirty end
+ */
 
-export const useControlValid = (control?: AbstractControl): AbstractControl['valid'] => {
+/**
+ * useControlValid start
+ */
+function useControlValid(): false;
+// eslint-disable-next-line no-redeclare
+function useControlValid(control: AbstractControl): boolean;
+// eslint-disable-next-line no-redeclare
+function useControlValid(control?: AbstractControl): AbstractControl['valid'] {
   const [valid, setValid] = useState<AbstractControl['valid']>(control ? control?.valid : false);
 
   useEffect(() => {
@@ -82,9 +118,19 @@ export const useControlValid = (control?: AbstractControl): AbstractControl['val
   }, [control]);
 
   return valid;
-};
+}
+/**
+ * useControlValid end
+ */
 
-export const useControlErrors = (control?: AbstractControl): Errors | null => {
+/**
+ * useControlErrors start
+ */
+function useControlErrors(): null;
+// eslint-disable-next-line no-redeclare
+function useControlErrors(control: AbstractControl): Errors | null;
+// eslint-disable-next-line no-redeclare
+function useControlErrors(control?: AbstractControl): Errors | null {
   const [errors, setErrors] = useState<Errors | null>(control?.errors || null);
 
   useEffect(() => {
@@ -99,7 +145,10 @@ export const useControlErrors = (control?: AbstractControl): Errors | null => {
   }, [control]);
 
   return errors;
-};
+}
+/**
+ * useControlErrors end
+ */
 
 // export const useControlAsyncErrors = (control?: AbstractControl) => {
 //   const [asyncErrors, setAsyncErrors] = useState(control?.asyncErrors);
@@ -118,7 +167,14 @@ export const useControlErrors = (control?: AbstractControl): Errors | null => {
 //   return asyncErrors;
 // };
 
-export const useControlControls = <C extends GroupControl | ListControl>(control?: C): C['controls'] | undefined => {
+/**
+ * useControlControls start
+ */
+function useControlControls(): undefined;
+// eslint-disable-next-line no-redeclare
+function useControlControls<C extends GroupControl | ListControl>(control: C): C['controls'];
+// eslint-disable-next-line no-redeclare
+function useControlControls<C extends GroupControl | ListControl>(control?: C): C['controls'] | undefined {
   const [controls, setControls] = useState<C['controls'] | undefined>(control?.controls);
 
   useEffect(() => {
@@ -134,4 +190,9 @@ export const useControlControls = <C extends GroupControl | ListControl>(control
   }, [control]);
 
   return controls;
-};
+}
+/**
+ * useControlControls end
+ */
+
+export { useControlValue, useControlDisabled, useControlControls, useControlErrors, useControlValid, useControlDirty };
