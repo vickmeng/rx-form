@@ -14,8 +14,10 @@ const useUpdateEffect: typeof useEffect = (effect, deps) => {
   }, deps);
 };
 
-export const useControlValue = <V>(control?: AbstractControl<V>) => {
-  const [value, setValue] = useState<V | undefined>(control?.value);
+export const useControlValue = <C extends AbstractControl>(
+  control?: C
+): C extends AbstractControl ? C['value'] : undefined => {
+  const [value, setValue] = useState<C['value'] | undefined>(control?.value);
 
   useEffect(() => {
     const subscriber = control?.valueChange.subscribe(setValue);
@@ -31,7 +33,7 @@ export const useControlValue = <V>(control?: AbstractControl<V>) => {
   return value;
 };
 
-export const useControlDisabled = (control?: AbstractControl) => {
+export const useControlDisabled = (control?: AbstractControl): boolean => {
   const [disabled, setDisabled] = useState<boolean>(!!control?.disabled);
 
   useEffect(() => {
@@ -48,7 +50,7 @@ export const useControlDisabled = (control?: AbstractControl) => {
   return disabled;
 };
 
-export const useControlDirty = (control?: AbstractControl) => {
+export const useControlDirty = (control?: AbstractControl): boolean => {
   const [dirty, setDirty] = useState<boolean>(!!control?.dirty);
 
   useEffect(() => {
@@ -65,7 +67,7 @@ export const useControlDirty = (control?: AbstractControl) => {
   return dirty;
 };
 
-export const useControlValid = (control?: AbstractControl) => {
+export const useControlValid = (control?: AbstractControl): AbstractControl['valid'] => {
   const [valid, setValid] = useState<AbstractControl['valid']>(control ? control?.valid : true);
 
   useEffect(() => {
@@ -82,7 +84,7 @@ export const useControlValid = (control?: AbstractControl) => {
   return valid;
 };
 
-export const useControlErrors = (control?: AbstractControl) => {
+export const useControlErrors = (control?: AbstractControl): Errors | null => {
   const [errors, setErrors] = useState<Errors | null>(control?.errors || null);
 
   useEffect(() => {
@@ -116,7 +118,7 @@ export const useControlErrors = (control?: AbstractControl) => {
 //   return asyncErrors;
 // };
 
-export const useControlControls = <C extends GroupControl | ListControl>(control?: C) => {
+export const useControlControls = <C extends GroupControl | ListControl>(control?: C): C['controls'] | undefined => {
   const [controls, setControls] = useState<C['controls'] | undefined>(control?.controls);
 
   useEffect(() => {

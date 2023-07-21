@@ -23,7 +23,7 @@ export function Field<V>(props: FieldProps<V>) {
     throw new Error('props error:Field can only receive FieldControl as control');
   }
 
-  const value = useControlValue<V>(control);
+  const value = useControlValue<FieldControl<V>>(control);
   const disabled = useControlDisabled(control);
   const dirty = useControlDirty(control);
   const valid = useControlValid(control);

@@ -5,9 +5,9 @@ export default {
   output: {
     dir: 'dist',
     format: 'es',
-    manualChunks: {
-      validators: ['src/validators/index.ts'],
-    },
+    // manualChunks: {
+    // validators: ['src/validators/index.ts'],
+    // },
   },
   external: ['lodash', 'rxjs'],
   plugins: [
