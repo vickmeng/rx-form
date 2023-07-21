@@ -68,7 +68,7 @@ export const useControlDirty = (control?: AbstractControl): boolean => {
 };
 
 export const useControlValid = (control?: AbstractControl): AbstractControl['valid'] => {
-  const [valid, setValid] = useState<AbstractControl['valid']>(control ? control?.valid : true);
+  const [valid, setValid] = useState<AbstractControl['valid']>(control ? control?.valid : false);
 
   useEffect(() => {
     const subscriber = control?.validChange.subscribe(setValid);
