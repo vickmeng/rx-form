@@ -1,0 +1,30 @@
+{
+  "name": "@rx-form/core",
+  "version": "1.0.0",
+  "description": "core",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c --watch"
+  },
+  "author": "laomeng",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.0.0"
+  },
+  "peerDependencies": {
+    "rxjs": "*"
+  },
+  "devDependencies": {
+    "rxjs": "*"
+  }
+}

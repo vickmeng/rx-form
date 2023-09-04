@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List/> should render <List/> 1`] = `
+<DocumentFragment>
+  <input
+    readonly=""
+    value="Vick"
+  />
+  <input
+    readonly=""
+    value="Tom"
+  />
+</DocumentFragment>
+`;
