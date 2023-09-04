@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build:{
     outDir:'../../docs',
-    assetsDir:'rx-form'
+    assetsDir:'rx-form/assets'
   }
   // preprocessorOptions: {
   //   less: {
