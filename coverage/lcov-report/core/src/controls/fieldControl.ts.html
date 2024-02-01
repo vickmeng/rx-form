@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">52.63% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>38/38</span>
+                <span class='fraction'>20/38</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">52.63% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>38/38</span>
+                <span class='fraction'>20/38</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -107,36 +107,36 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">18x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
-<span class="cline-any cline-yes">165x</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FormControlOptions } from '../types';
@@ -153,28 +153,28 @@ export class FieldControl&lt;V = any&gt; extends AbstractControl&lt;V&gt; {
     this.initBasicParams(value, options);
   }
 &nbsp;
-  override setValue = (value: V) =&gt; {
-    /**
-     * start
-     * distinct value change
-     *
-     * decide to not put this logic in valueChange pipeline, two reason as below
-     * 1.cannot work when call setValue the first time
-     * 2.will trigger the diff fn in each subscribe place, it is redundant
-     *
-     * Same thing with errorsChange and validChange
-     */
-    if (value === this.value) {
-      return;
-    }
-    /**
-     * end
-     */
-    this.valueSubject$.next(value);
+  override setValue = <span class="fstat-no" title="function not covered" >(value: V) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    /**</span>
+<span class="cstat-no" title="statement not covered" >     * start</span>
+<span class="cstat-no" title="statement not covered" >     * distinct value change</span>
+<span class="cstat-no" title="statement not covered" >     *</span>
+<span class="cstat-no" title="statement not covered" >     * decide to not put this logic in valueChange pipeline, two reason as below</span>
+<span class="cstat-no" title="statement not covered" >     * 1.cannot work when call setValue the first time</span>
+<span class="cstat-no" title="statement not covered" >     * 2.will trigger the diff fn in each subscribe place, it is redundant</span>
+<span class="cstat-no" title="statement not covered" >     *</span>
+<span class="cstat-no" title="statement not covered" >     * Same thing with errorsChange and validChange</span>
+<span class="cstat-no" title="statement not covered" >     */</span>
+<span class="cstat-no" title="statement not covered" >    if (value === this.value) {</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    /**</span>
+<span class="cstat-no" title="statement not covered" >     * end</span>
+<span class="cstat-no" title="statement not covered" >     */</span>
+<span class="cstat-no" title="statement not covered" >    this.valueSubject$.next(value);</span>
   };
 &nbsp;
-  override reset = () =&gt; {
-    this.setValue(this._initValue);
+  override reset = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    this.setValue(this._initValue);</span>
   };
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -184,7 +184,7 @@ export class FieldControl&lt;V = any&gt; extends AbstractControl&lt;V&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-01T07:46:03.595Z
+                at 2024-02-01T07:46:43.924Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

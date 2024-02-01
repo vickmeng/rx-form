@@ -32,7 +32,7 @@ export const createControl = (params: CreateControlParams) => {
  */
 // @ts-ignore
 export const deepCheckFirstInvalidControl = (controls: AbstractControl[]) => {
-  let res;
+  let res: AbstractControl | undefined;
 
   const loop = (_controls: AbstractControl[]) => {
     _controls.find((_control) => {
