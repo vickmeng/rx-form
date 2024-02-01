@@ -1,11 +1,11 @@
 import { ValidatorFn } from '../types';
 
-const EMAIL_REGEXP =
+export const EMAIL_REGEXP =
   /^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
-const isEmptyInputValue = (value: any) => value == null || value.length === 0;
+export const isEmptyInputValue = (value: any) => value == null || value.length === 0;
 
-function hasValidLength(value: any): boolean {
+export function hasValidLength(value: any): boolean {
   // non-strict comparison is intentional, to check for both `null` and `undefined` values
   return value != null && typeof value.length === 'number';
 }

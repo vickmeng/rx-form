@@ -22,6 +22,14 @@ export type Errors = {
 export type Valid = boolean;
 
 export type ValidatorFn<V = any> = (control: AbstractControl<V>) => Errors | null;
+
+export type ErrorMessageFactory = (errors: Errors | null) => string | undefined;
+
+export type ValidatorMessageFactory<V = any> = (params: {
+  message: string | ErrorMessageFactory;
+  [key: string]: any;
+}) => ValidatorFn<V>;
+
 // export type AsyncValidatorFn<V = any> = (control: AbstractControl<V>) => Promise<Errors | null>;
 
 export interface ControlBasicOptions {
