@@ -1,6 +1,7 @@
 /**
  * Controls
  */
+
 export { FieldControl } from './controls/fieldControl';
 export { GroupControl } from './controls/groupControl';
 export { ListControl } from './controls/listControl';
@@ -83,3 +84,5 @@ export {
   maxLengthValidatorFactory,
   patternValidatorFactory,
 } from './validators/validatorMessageFactories';
+
+export { deepCheckFirstInvalidControl } from './utils/help';

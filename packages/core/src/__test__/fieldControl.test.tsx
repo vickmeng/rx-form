@@ -1,4 +1,5 @@
-import { FieldControl, emailValidator, requiredValidator } from '../index';
+import { FieldControl } from '../controls/fieldControl';
+import { emailValidator, requiredValidator } from '../validators';
 
 describe('fieldControl', () => {
   it('should be created correctly', () => {

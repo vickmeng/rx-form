@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1706768760578" clover="3.2.0">
-  <project timestamp="1706768760578" name="All files">
-    <metrics statements="1539" coveredstatements="683" conditionals="85" coveredconditionals="70" methods="102" coveredmethods="41" elements="1726" coveredelements="794" complexity="0" loc="1539" ncloc="1539" packages="8" files="18" classes="18"/>
+<coverage generated="1706769628706" clover="3.2.0">
+  <project timestamp="1706769628706" name="All files">
+    <metrics statements="1542" coveredstatements="683" conditionals="85" coveredconditionals="70" methods="102" coveredmethods="41" elements="1729" coveredelements="794" complexity="0" loc="1542" ncloc="1542" packages="8" files="18" classes="18"/>
     <package name="core.src">
-      <metrics statements="85" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="88" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="index.ts" path="/Users/mengweikang/Desktop/yzw-rx-form/packages/core/src/index.ts">
-        <metrics statements="85" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="88" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -91,6 +91,9 @@
         <line num="83" count="0" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
         <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
       </file>
     </package>
     <package name="core.src.controls">
