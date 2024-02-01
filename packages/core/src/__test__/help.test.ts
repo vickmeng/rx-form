@@ -1,8 +1,10 @@
-import { deepCheckFirstInvalidControl } from '../utils';
-import { FieldControl } from '../controls/fieldControl';
-import { requiredValidatorFactory } from '../validators/validatorMessageFactories';
-import { GroupControl } from '../controls/groupControl';
-import { ListControl } from '../controls/listControl';
+import {
+  ListControl,
+  GroupControl,
+  requiredValidatorFactory,
+  FieldControl,
+  deepCheckFirstInvalidControl,
+} from '../index';
 
 describe('help', () => {
   describe('deepCheckFirstInvalidControl', () => {
