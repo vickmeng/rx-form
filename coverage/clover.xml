@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1707122320428" clover="3.2.0">
-  <project timestamp="1707122320428" name="All files">
-    <metrics statements="1545" coveredstatements="1418" conditionals="296" coveredconditionals="292" methods="139" coveredmethods="123" elements="1980" coveredelements="1833" complexity="0" loc="1545" ncloc="1545" packages="8" files="18" classes="18"/>
+<coverage generated="1707122556180" clover="3.2.0">
+  <project timestamp="1707122556180" name="All files">
+    <metrics statements="1551" coveredstatements="1424" conditionals="296" coveredconditionals="292" methods="139" coveredmethods="123" elements="1986" coveredelements="1839" complexity="0" loc="1551" ncloc="1551" packages="8" files="19" classes="19"/>
     <package name="core.src">
       <metrics statements="88" coveredstatements="88" conditionals="13" coveredconditionals="13" methods="22" coveredmethods="13"/>
       <file name="index.ts" path="/Users/mengweikang/Desktop/yzw-rx-form/packages/core/src/index.ts">
@@ -830,9 +830,9 @@
       </file>
     </package>
     <package name="core.src.utils">
-      <metrics statements="61" coveredstatements="61" conditionals="16" coveredconditionals="16" methods="4" coveredmethods="4"/>
-      <file name="controlUtils.ts" path="/Users/mengweikang/Desktop/yzw-rx-form/packages/core/src/utils/controlUtils.ts">
-        <metrics statements="46" coveredstatements="46" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
+      <metrics statements="67" coveredstatements="67" conditionals="16" coveredconditionals="16" methods="4" coveredmethods="4"/>
+      <file name="checkControlUtils.ts" path="/Users/mengweikang/Desktop/yzw-rx-form/packages/core/src/utils/checkControlUtils.ts">
+        <metrics statements="37" coveredstatements="37" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -845,40 +845,49 @@
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="61" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="13" type="stmt"/>
-        <line num="16" count="61" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="48" type="stmt"/>
-        <line num="18" count="48" type="stmt"/>
-        <line num="19" count="61" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="26" count="6" type="stmt"/>
-        <line num="27" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="12" type="cond" truecount="1" falsecount="0"/>
-        <line num="29" count="18" type="cond" truecount="1" falsecount="0"/>
-        <line num="30" count="4" type="stmt"/>
-        <line num="31" count="4" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
-        <line num="33" count="14" type="cond" truecount="1" falsecount="0"/>
-        <line num="34" count="18" type="cond" truecount="1" falsecount="0"/>
-        <line num="35" count="8" type="stmt"/>
-        <line num="36" count="18" type="cond" truecount="2" falsecount="0"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="38" count="3" type="stmt"/>
-        <line num="39" count="3" type="stmt"/>
-        <line num="40" count="3" type="stmt"/>
-        <line num="41" count="12" type="stmt"/>
-        <line num="42" count="6" type="stmt"/>
-        <line num="43" count="6" type="stmt"/>
-        <line num="44" count="6" type="stmt"/>
-        <line num="45" count="6" type="stmt"/>
-        <line num="46" count="6" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="17" count="6" type="stmt"/>
+        <line num="18" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="12" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="18" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="23" count="4" type="stmt"/>
+        <line num="24" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="18" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="27" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="12" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="36" count="6" type="stmt"/>
+        <line num="37" count="6" type="stmt"/>
+      </file>
+      <file name="controlUtils.ts" path="/Users/mengweikang/Desktop/yzw-rx-form/packages/core/src/utils/controlUtils.ts">
+        <metrics statements="15" coveredstatements="15" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="61" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="12" count="61" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="48" type="stmt"/>
+        <line num="14" count="48" type="stmt"/>
+        <line num="15" count="61" type="stmt"/>
       </file>
       <file name="errorUtils.ts" path="/Users/mengweikang/Desktop/yzw-rx-form/packages/core/src/utils/errorUtils.ts">
         <metrics statements="15" coveredstatements="15" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
