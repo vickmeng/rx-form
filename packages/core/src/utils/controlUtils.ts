@@ -1,20 +1,10 @@
 import { isEmpty } from 'lodash';
 
-import { CreateControlParams, Errors, ValidatorFn } from '../types';
+import { CreateControlParams } from '../types';
 import { AbstractControl } from '../controls/abstractControl';
 import { FieldControl } from '../controls/fieldControl';
-
-export const getErrorsBy = (control: AbstractControl, validators: ValidatorFn[]) => {
-  const errors: Errors = validators.reduce((acc, cur) => {
-    const error = cur(control);
-    if (error) {
-      acc = { ...acc, ...error };
-    }
-    return acc;
-  }, {});
-
-  return isEmpty(errors) ? null : errors;
-};
+import { ListControl } from '../controls/listControl';
+import { GroupControl } from '../controls/groupControl';
 
 /**
  * createControl
@@ -43,17 +33,10 @@ export const deepCheckFirstInvalidControl = (controls: AbstractControl[]) => {
 
       if (_control instanceof FieldControl) {
         return false;
-        // 这里只能是ListControl
-        // TODO 引入ListControl就报错 可能是循环引用的问题
-        // @ts-ignore
-      } else if (Array.isArray(_control.controls)) {
-        // @ts-ignore
+      } else if (_control instanceof ListControl) {
         return loop(_control.controls);
       } else {
-        // 这里只能是GroupControl
-        // TODO 引入GroupControl就报错
-        // @ts-ignore
-        return loop(Object.values(_control.controls as AbstractControl[]));
+        return loop(Object.values((_control as GroupControl).controls));
       }
     });
   };

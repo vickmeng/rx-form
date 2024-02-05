@@ -85,4 +85,4 @@ export {
   patternValidatorFactory,
 } from './validators/validatorMessageFactories';
 
-export { deepCheckFirstInvalidControl } from './utils';
+export { deepCheckFirstInvalidControl } from './utils/controlUtils';

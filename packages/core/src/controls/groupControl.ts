@@ -9,7 +9,7 @@ import {
   GroupValue,
   Valid,
 } from '../types';
-import { createControl } from '../utils';
+import { createControl } from '../utils/controlUtils';
 
 import { AbstractControl } from './abstractControl';
 

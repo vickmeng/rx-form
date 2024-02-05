@@ -1,6 +1,35 @@
 import { Observable } from 'rxjs';
 
 import { AbstractControl } from '../controls/abstractControl';
+import { GroupControl } from '../controls/groupControl';
+import { ListControl } from '../controls/listControl';
+
+export type AbstractControlSubset<V = any> = {
+  value: V;
+  errors: Errors | null;
+  valid: boolean;
+  invalid: boolean;
+  disabled: boolean;
+  enabled: boolean;
+  dirty: boolean;
+  pristine: boolean;
+  parent?: GroupControl | ListControl;
+  valueChange: Observable<V>;
+  errorsChange: Observable<Errors | null>;
+  validChange: Observable<boolean>;
+  disabledChange: Observable<boolean>;
+  dirtyChange: Observable<boolean>;
+  // pristineChange: Observable<boolean>;
+  setValue: (value: V) => void;
+  reset: () => void;
+  disable: () => void;
+  enable: () => void;
+  markAsDirty: () => void;
+  markAsPristine: () => void;
+  destroy: () => void;
+  setValidators: (validators: ValidatorFn[]) => void;
+  validateAndUpdateErrors: () => void;
+};
 
 export type GroupValue = {
   [key: string]: any;
@@ -21,7 +50,7 @@ export type Errors = {
 // export type Valid = boolean | 'pending';
 export type Valid = boolean;
 
-export type ValidatorFn<V = any> = (control: AbstractControl<V>) => Errors | null;
+export type ValidatorFn<V = any> = (control: AbstractControlSubset<V>) => Errors | null;
 
 export type ErrorMessageFactory = (errors: Errors | null) => string | undefined;
 

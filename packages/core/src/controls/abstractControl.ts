@@ -1,13 +1,13 @@
 import { Subject, takeUntil } from 'rxjs';
 import { isEqual } from 'lodash';
 
-import { ControlBasicOptions, Errors, Valid, ValidatorFn } from '../types';
-import { getErrorsBy } from '../utils';
+import { AbstractControlSubset, ControlBasicOptions, Errors, Valid, ValidatorFn } from '../types';
+import { getErrorsBy } from '../utils/errorUtils';
 
 import { GroupControl } from './groupControl';
 import { ListControl } from './listControl';
 
-export abstract class AbstractControl<V = any> {
+export abstract class AbstractControl<V = any> implements AbstractControlSubset<V> {
   get value() {
     return this._value;
   }
@@ -237,7 +237,7 @@ export abstract class AbstractControl<V = any> {
   };
 
   validateAndUpdateErrors = () => {
-    const errors = getErrorsBy(this, this._validators);
+    const errors = getErrorsBy<V>(this, this._validators);
 
     this.setErrors(errors);
     this.setValid(this._noError());
