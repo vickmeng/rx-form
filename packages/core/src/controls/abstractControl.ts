@@ -1,5 +1,4 @@
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Subject, takeUntil } from 'rxjs';
 import { isEqual } from 'lodash';
 
 import { ControlBasicOptions, Errors, Valid, ValidatorFn } from '../types';

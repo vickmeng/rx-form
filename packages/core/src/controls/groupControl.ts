@@ -1,5 +1,4 @@
-import { merge, Observable, Subject, Subscription } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
+import { merge, Observable, Subject, Subscription, takeUntil, map } from 'rxjs';
 
 import {
   ControlWithChildren,
