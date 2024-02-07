@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.93% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>31/33</span>
+                <span class='fraction'>0/33</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">93.93% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>31/33</span>
+                <span class='fraction'>0/33</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -96,72 +96,72 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useContext } from 'react';
-import { GroupControl, GroupValue } from '@yzw-rx-form/core';
-&nbsp;
-import { GroupInternalProps, GroupProps } from '../types';
-import { isGroupWithNameProps } from '../utils';
-import { useControlControls, useControlDisabled } from '../hooks';
-&nbsp;
-import { ParentFormContext } from './context';
-&nbsp;
-export const Group = &lt;V extends GroupValue = any&gt;(props: GroupProps&lt;V&gt;) =&gt; {
-  const { children } = props;
-&nbsp;
-  const parent = useContext(ParentFormContext);
-&nbsp;
-  const { name = undefined, control } = isGroupWithNameProps(props)
-    ? { name: props.name, control: parent!.get&lt;GroupControl&lt;V&gt;&gt;(props.name) }
-    : { control: props.control };
-&nbsp;
-  if (!(control instanceof GroupControl)) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import React, { useContext } from 'react';</span></span></span>
+<span class="cstat-no" title="statement not covered" >import { GroupControl, GroupValue } from '@yzw-rx-form/core';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >import { GroupInternalProps, GroupProps } from '../types';</span>
+<span class="cstat-no" title="statement not covered" >import { isGroupWithNameProps } from '../utils';</span>
+<span class="cstat-no" title="statement not covered" >import { useControlControls, useControlDisabled } from '../hooks';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >import { ParentFormContext } from './context';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >export const Group = &lt;V extends GroupValue = any&gt;(props: GroupProps&lt;V&gt;) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  const { children } = props;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const parent = useContext(ParentFormContext);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const { name = undefined, control } = isGroupWithNameProps(props)</span>
+<span class="cstat-no" title="statement not covered" >    ? { name: props.name, control: parent!.get&lt;GroupControl&lt;V&gt;&gt;(props.name) }</span>
+<span class="cstat-no" title="statement not covered" >    : { control: props.control };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  if (!(control instanceof GroupControl)) {</span>
 <span class="cstat-no" title="statement not covered" >    throw new Error('props error:Group can only receive GroupControl as control');</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-  const disabled = useControlDisabled(control);
-  const controls = useControlControls&lt;GroupControl&lt;V&gt;&gt;(control);
-&nbsp;
-  const childProps: GroupInternalProps&lt;V&gt; = {
-    name,
-    disabled,
-    control,
-    childControls: controls,
-  };
-&nbsp;
-  return &lt;ParentFormContext.Provider value={control}&gt;{children(childProps)}&lt;/ParentFormContext.Provider&gt;;
-};
+<span class="cstat-no" title="statement not covered" >  const disabled = useControlDisabled(control);</span>
+<span class="cstat-no" title="statement not covered" >  const controls = useControlControls&lt;GroupControl&lt;V&gt;&gt;(control);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const childProps: GroupInternalProps&lt;V&gt; = {</span>
+<span class="cstat-no" title="statement not covered" >    name,</span>
+<span class="cstat-no" title="statement not covered" >    disabled,</span>
+<span class="cstat-no" title="statement not covered" >    control,</span>
+<span class="cstat-no" title="statement not covered" >    childControls: controls,</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  return &lt;ParentFormContext.Provider value={control}&gt;{children(childProps)}&lt;/ParentFormContext.Provider&gt;;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -169,7 +169,7 @@ export const Group = &lt;V extends GroupValue = any&gt;(props: GroupProps&lt;V&g
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-05T08:42:36.143Z
+                at 2024-02-05T08:44:22.874Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

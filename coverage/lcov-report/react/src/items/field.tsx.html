@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.91% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>47/49</span>
+                <span class='fraction'>0/49</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.91% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>47/49</span>
+                <span class='fraction'>0/49</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,104 +112,104 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">9x</span>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useContext } from 'react';
-import { FieldControl } from '@yzw-rx-form/core';
-&nbsp;
-import { FieldInternalProps, FieldProps } from '../types';
-import { isFieldWithNameProps } from '../utils';
-import { useControlDirty, useControlDisabled, useControlErrors, useControlValid, useControlValue } from '../hooks';
-&nbsp;
-import { ParentFormContext } from './context';
-&nbsp;
-export function Field&lt;V&gt;(props: FieldProps&lt;V&gt;) {
-  const { children } = props;
-&nbsp;
-  const parent = useContext(ParentFormContext);
-&nbsp;
-  /**
-   * Two ways can get formControl,from props or Context
-   */
-  const { name = undefined, control } = isFieldWithNameProps&lt;V&gt;(props)
-    ? { name: props.name, control: parent!.get&lt;FieldControl&lt;V&gt;&gt;(props.name) }
-    : { control: props.control };
-&nbsp;
-  if (!(control instanceof FieldControl)) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { useContext } from 'react';</span></span></span>
+<span class="cstat-no" title="statement not covered" >import { FieldControl } from '@yzw-rx-form/core';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >import { FieldInternalProps, FieldProps } from '../types';</span>
+<span class="cstat-no" title="statement not covered" >import { isFieldWithNameProps } from '../utils';</span>
+<span class="cstat-no" title="statement not covered" >import { useControlDirty, useControlDisabled, useControlErrors, useControlValid, useControlValue } from '../hooks';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >import { ParentFormContext } from './context';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >export function Field&lt;V&gt;(props: FieldProps&lt;V&gt;) {</span>
+<span class="cstat-no" title="statement not covered" >  const { children } = props;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const parent = useContext(ParentFormContext);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  /**</span>
+<span class="cstat-no" title="statement not covered" >   * Two ways can get formControl,from props or Context</span>
+<span class="cstat-no" title="statement not covered" >   */</span>
+<span class="cstat-no" title="statement not covered" >  const { name = undefined, control } = isFieldWithNameProps&lt;V&gt;(props)</span>
+<span class="cstat-no" title="statement not covered" >    ? { name: props.name, control: parent!.get&lt;FieldControl&lt;V&gt;&gt;(props.name) }</span>
+<span class="cstat-no" title="statement not covered" >    : { control: props.control };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  if (!(control instanceof FieldControl)) {</span>
 <span class="cstat-no" title="statement not covered" >    throw new Error('props error:Field can only receive FieldControl as control');</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-&nbsp;
-  const value = useControlValue&lt;FieldControl&lt;V&gt;&gt;(control);
-  const disabled = useControlDisabled(control);
-  const dirty = useControlDirty(control);
-  const valid = useControlValid(control);
-  const errors = useControlErrors(control);
-  // const asyncErrors = useControlAsyncErrors(control);
-&nbsp;
-  const childrenProps: FieldInternalProps = {
-    name,
-    value,
-    control,
-    setValue: control.setValue,
-    markAsDirty: control.markAsDirty,
-    markAsPristine: control.markAsPristine,
-    validateAndUpdateErrors: control.validateAndUpdateErrors,
-    errors,
-    // asyncErrors,
-    disabled,
-    valid,
-    dirty,
-  };
-&nbsp;
-  return children(childrenProps);
-}
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const value = useControlValue&lt;FieldControl&lt;V&gt;&gt;(control);</span>
+<span class="cstat-no" title="statement not covered" >  const disabled = useControlDisabled(control);</span>
+<span class="cstat-no" title="statement not covered" >  const dirty = useControlDirty(control);</span>
+<span class="cstat-no" title="statement not covered" >  const valid = useControlValid(control);</span>
+<span class="cstat-no" title="statement not covered" >  const errors = useControlErrors(control);</span>
+<span class="cstat-no" title="statement not covered" >  // const asyncErrors = useControlAsyncErrors(control);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  const childrenProps: FieldInternalProps = {</span>
+<span class="cstat-no" title="statement not covered" >    name,</span>
+<span class="cstat-no" title="statement not covered" >    value,</span>
+<span class="cstat-no" title="statement not covered" >    control,</span>
+<span class="cstat-no" title="statement not covered" >    setValue: control.setValue,</span>
+<span class="cstat-no" title="statement not covered" >    markAsDirty: control.markAsDirty,</span>
+<span class="cstat-no" title="statement not covered" >    markAsPristine: control.markAsPristine,</span>
+<span class="cstat-no" title="statement not covered" >    validateAndUpdateErrors: control.validateAndUpdateErrors,</span>
+<span class="cstat-no" title="statement not covered" >    errors,</span>
+<span class="cstat-no" title="statement not covered" >    // asyncErrors,</span>
+<span class="cstat-no" title="statement not covered" >    disabled,</span>
+<span class="cstat-no" title="statement not covered" >    valid,</span>
+<span class="cstat-no" title="statement not covered" >    dirty,</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  return children(childrenProps);</span>
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -217,7 +217,7 @@ export function Field&lt;V&gt;(props: FieldProps&lt;V&gt;) {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-05T08:42:36.143Z
+                at 2024-02-05T08:44:22.874Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
