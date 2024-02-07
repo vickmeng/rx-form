@@ -59,12 +59,19 @@ export type Valid = boolean;
 
 export type ValidatorFn<V = any> = (control: BaseControl<V>) => Errors | null;
 
-export type ErrorMessageFactory = (errors: Errors | null) => string | undefined;
-
-export type ValidatorMessageFactory<V = any> = (params: {
-  message: string | ErrorMessageFactory;
-  [key: string]: any;
-}) => ValidatorFn<V>;
+export type ErrorMessageFactory<E = Errors> = (errors: E | null) => string | undefined;
+/**
+ * @ValidatorMessageFactory
+ * T {
+ *     E 错误
+ *     P 扩展参数
+ * }
+ */
+export type ValidatorMessageFactory<T extends { E: Errors; P?: any } = undefined> = (
+  params: T['P'] & {
+    message: string | ErrorMessageFactory<T['E']>;
+  }
+) => ValidatorFn;
 
 // export type AsyncValidatorFn<V = any> = (control: AbstractControl<V>) => Promise<Errors | null>;
 

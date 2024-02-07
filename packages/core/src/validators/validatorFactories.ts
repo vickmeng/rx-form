@@ -1,11 +1,15 @@
-import { ErrorMessageFactory, ValidatorMessageFactory } from '../types';
+/**
+ * @Note
+ * Alternative to Validators, you can customize error message prompts
+ */
+import { ValidatorMessageFactory } from '../types';
 
 import { EMAIL_REGEXP, hasValidLength, isEmptyInputValue, nullValidator } from './index';
 
-export const minValidatorFactory: ValidatorMessageFactory = (params: {
-  message: string | ErrorMessageFactory;
-  min: number;
-}) => {
+export const minValidatorFactory: ValidatorMessageFactory<{
+  E: { min: number; actual: any };
+  P: { min: number };
+}> = (params) => {
   const { min, message } = params;
 
   return (control) => {
@@ -21,10 +25,10 @@ export const minValidatorFactory: ValidatorMessageFactory = (params: {
   };
 };
 
-export const maxValidatorFactory: ValidatorMessageFactory = (params: {
-  message: string | ErrorMessageFactory;
-  max: number;
-}) => {
+export const maxValidatorFactory: ValidatorMessageFactory<{
+  E: { max: number; actual: any };
+  P: { max: number };
+}> = (params) => {
   const { max, message } = params;
 
   return (control) => {
@@ -40,14 +44,18 @@ export const maxValidatorFactory: ValidatorMessageFactory = (params: {
   };
 };
 
-export const requiredValidatorFactory: ValidatorMessageFactory = ({ message }) => {
+export const requiredValidatorFactory: ValidatorMessageFactory<{
+  E: { required: true };
+}> = ({ message }) => {
   return (control) =>
     isEmptyInputValue(control.value)
       ? { required: typeof message === 'string' ? message : message({ required: true }) }
       : null;
 };
 
-export const requiredTrueValidatorFactory: ValidatorMessageFactory = ({ message }) => {
+export const requiredTrueValidatorFactory: ValidatorMessageFactory<{
+  E: { required: true };
+}> = ({ message }) => {
   return (control) => {
     return control.value === true
       ? null
@@ -55,7 +63,9 @@ export const requiredTrueValidatorFactory: ValidatorMessageFactory = ({ message 
   };
 };
 
-export const emailValidatorFactory: ValidatorMessageFactory = ({ message }) => {
+export const emailValidatorFactory: ValidatorMessageFactory<{
+  E: { email: true };
+}> = ({ message }) => {
   return (control) => {
     if (isEmptyInputValue(control.value)) {
       return null;
@@ -66,10 +76,10 @@ export const emailValidatorFactory: ValidatorMessageFactory = ({ message }) => {
   };
 };
 
-export const minLengthValidatorFactory: ValidatorMessageFactory = (params: {
-  message: string | ErrorMessageFactory;
-  minLength: number;
-}) => {
+export const minLengthValidatorFactory: ValidatorMessageFactory<{
+  E: { requiredLength: number; actualLength: number };
+  P: { minLength: number };
+}> = (params) => {
   const { minLength, message } = params;
 
   return (control) => {
@@ -90,10 +100,10 @@ export const minLengthValidatorFactory: ValidatorMessageFactory = (params: {
   };
 };
 
-export const maxLengthValidatorFactory: ValidatorMessageFactory = (params: {
-  message: string | ErrorMessageFactory;
-  maxLength: number;
-}) => {
+export const maxLengthValidatorFactory: ValidatorMessageFactory<{
+  E: { requiredLength: number; actualLength: number };
+  P: { maxLength: number };
+}> = (params) => {
   const { maxLength, message } = params;
 
   return (control) => {
@@ -108,10 +118,10 @@ export const maxLengthValidatorFactory: ValidatorMessageFactory = (params: {
   };
 };
 
-export const patternValidatorFactory: ValidatorMessageFactory = (params: {
-  message: string | ErrorMessageFactory;
-  pattern: string | RegExp;
-}) => {
+export const patternValidatorFactory: ValidatorMessageFactory<{
+  E: { requiredPattern: string; actualValue: any };
+  P: { pattern: string | RegExp };
+}> = (params) => {
   const { message, pattern } = params;
   if (!pattern) return nullValidator;
   let regex: RegExp;

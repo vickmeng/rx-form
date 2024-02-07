@@ -1,3 +1,8 @@
+/**
+ * @Note
+ * Please prioritize the use of ValidatorFactory
+ */
+
 import { ValidatorFn } from '../types';
 
 export const EMAIL_REGEXP =

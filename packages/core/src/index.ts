@@ -28,50 +28,14 @@ export type {
  */
 
 export {
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   requiredValidator,
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   requiredTrueValidator,
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   minValidator,
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   maxValidator,
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   emailValidator,
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   minLengthValidator,
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   maxLengthValidator,
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   nullValidator,
-  /**
-   * @deprecated
-   * 不建议直接使用 请移步ValidatorFactory
-   */
   patternValidator,
 } from './validators';
 
@@ -84,6 +48,6 @@ export {
   minLengthValidatorFactory,
   maxLengthValidatorFactory,
   patternValidatorFactory,
-} from './validators/validatorMessageFactories';
+} from './validators/validatorFactories';
 
 export { deepCheckFirstInvalidControl } from './utils/checkControlUtils';

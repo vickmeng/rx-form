@@ -9,8 +9,8 @@ import { ListControl } from '../controls/listControl';
 import { GroupControl } from '../controls/groupControl';
 
 /**
- * deepCheckFirstInvalidControl
- * 深度递归深度寻找control以及其子control的第一个有error的control
+ * @deepCheckFirstInvalidControl
+ * deep loop and find the first control with error
  */
 export const deepCheckFirstInvalidControl = (controls: BaseControl[]) => {
   let res: BaseControl | undefined;
