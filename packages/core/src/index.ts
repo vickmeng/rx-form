@@ -14,6 +14,7 @@ export type {
   FormGroupControlsConfig,
   FormListControlsConfig,
   ValidatorFn,
+  AbstractControlSubset,
   // AsyncValidatorFn,
   Errors,
   GroupChildControls,
