@@ -5,7 +5,7 @@
 export { FieldControl } from './controls/fieldControl';
 export { GroupControl } from './controls/groupControl';
 export { ListControl } from './controls/listControl';
-export { AbstractControl } from './controls/abstractControl';
+export { BaseControl } from './controls/baseControl';
 
 export type {
   FormControlOptions,
@@ -14,7 +14,7 @@ export type {
   FormGroupControlsConfig,
   FormListControlsConfig,
   ValidatorFn,
-  AbstractControlSubset,
+  AbstractControl,
   // AsyncValidatorFn,
   Errors,
   GroupChildControls,

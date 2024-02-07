@@ -1,21 +1,21 @@
-import { merge, Observable, Subject, Subscription, takeUntil, map } from 'rxjs';
+import { map, merge, Observable, Subject, Subscription, takeUntil } from 'rxjs';
 
 import {
-  ControlWithChildren,
   CreateControlParams,
   FormGroupControlsConfig,
   FormGroupOptions,
   GroupChildControls,
   GroupValue,
+  ParentControl,
   Valid,
 } from '../types';
 import { createControl } from '../utils/controlUtils';
 
-import { AbstractControl } from './abstractControl';
+import { BaseControl } from './baseControl';
 
 export class GroupControl<V extends GroupValue = any>
-  extends AbstractControl<V>
-  implements ControlWithChildren<GroupChildControls>
+  extends BaseControl<V>
+  implements ParentControl<GroupChildControls>
 {
   get controls() {
     return this._controls;
@@ -73,7 +73,7 @@ export class GroupControl<V extends GroupValue = any>
     this.valueSubject$.next(this.getGroupValueFromControls());
   };
 
-  get = <C extends AbstractControl<any>>(name: string): C => {
+  get = <C extends BaseControl<any>>(name: string): C => {
     return this._controls[name] as C;
   };
 

@@ -3,7 +3,7 @@
  */
 import { isEmpty } from 'lodash';
 
-import { AbstractControl } from '../controls/abstractControl';
+import { BaseControl } from '../controls/baseControl';
 import { FieldControl } from '../controls/fieldControl';
 import { ListControl } from '../controls/listControl';
 import { GroupControl } from '../controls/groupControl';
@@ -12,10 +12,10 @@ import { GroupControl } from '../controls/groupControl';
  * deepCheckFirstInvalidControl
  * 深度递归深度寻找control以及其子control的第一个有error的control
  */
-export const deepCheckFirstInvalidControl = (controls: AbstractControl[]) => {
-  let res: AbstractControl | undefined;
+export const deepCheckFirstInvalidControl = (controls: BaseControl[]) => {
+  let res: BaseControl | undefined;
 
-  const loop = (_controls: AbstractControl[]) => {
+  const loop = (_controls: BaseControl[]) => {
     _controls.find((_control) => {
       if (!isEmpty(_control.errors)) {
         res = _control;

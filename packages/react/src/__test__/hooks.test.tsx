@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react';
-import { FieldControl, AbstractControl, requiredValidator, GroupControl } from '@yzw-rx-form/core';
+import { FieldControl, BaseControl, requiredValidator, GroupControl } from '@yzw-rx-form/core';
 
 import {
   // useControlAsyncErrors,
@@ -13,7 +13,7 @@ import {
 
 describe('hooks', () => {
   it('useControlValue', () => {
-    let control: undefined | AbstractControl = new FieldControl('Vick');
+    let control: undefined | BaseControl = new FieldControl('Vick');
 
     const { result, rerender } = renderHook(() => useControlValue(control));
 
@@ -37,7 +37,7 @@ describe('hooks', () => {
   });
 
   it('useControlDisabled', () => {
-    let control: undefined | AbstractControl = new FieldControl('', { disabled: true });
+    let control: undefined | BaseControl = new FieldControl('', { disabled: true });
 
     const { result, rerender } = renderHook(() => useControlDisabled(control));
 
@@ -61,7 +61,7 @@ describe('hooks', () => {
   });
 
   it('useControlDirty', () => {
-    let control: undefined | AbstractControl = new FieldControl('', { dirty: true });
+    let control: undefined | BaseControl = new FieldControl('', { dirty: true });
 
     const { result, rerender } = renderHook(() => useControlDirty(control));
 
@@ -85,7 +85,7 @@ describe('hooks', () => {
   });
 
   it('useControlValid', () => {
-    let control: undefined | AbstractControl = new FieldControl('', {});
+    let control: undefined | BaseControl = new FieldControl('', {});
 
     const { result, rerender } = renderHook(() => useControlValid(control));
 
@@ -109,7 +109,7 @@ describe('hooks', () => {
   });
 
   it('useControlErrors', () => {
-    let control: undefined | AbstractControl = new FieldControl('', {});
+    let control: undefined | BaseControl = new FieldControl('', {});
 
     const { result, rerender } = renderHook(() => useControlErrors(control));
 

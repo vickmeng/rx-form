@@ -1,13 +1,13 @@
 import { Subject, takeUntil } from 'rxjs';
 import { isEqual } from 'lodash';
 
-import { AbstractControlSubset, ControlBasicOptions, Errors, Valid, ValidatorFn } from '../types';
+import { AbstractControl, ControlBasicOptions, Errors, Valid, ValidatorFn } from '../types';
 import { getErrorsBy } from '../utils/errorUtils';
 
 import { GroupControl } from './groupControl';
 import { ListControl } from './listControl';
 
-export abstract class AbstractControl<V = any> implements AbstractControlSubset<V> {
+export abstract class BaseControl<V = any> implements AbstractControl<V> {
   get value() {
     return this._value;
   }

@@ -1,22 +1,19 @@
-import { map, skipWhile, takeUntil, merge, Observable, Subject, Subscription } from 'rxjs';
+import { map, merge, Observable, skipWhile, Subject, Subscription, takeUntil } from 'rxjs';
 
 import {
-  ControlWithChildren,
   CreateControlParams,
   FormListControlsConfig,
   FormListOptions,
   ListChildControls,
   ListValue,
+  ParentControl,
   Valid,
 } from '../types';
 import { createControl } from '../utils/controlUtils';
 
-import { AbstractControl } from './abstractControl';
+import { BaseControl } from './baseControl';
 
-export class ListControl<V = any>
-  extends AbstractControl<ListValue<V>>
-  implements ControlWithChildren<ListChildControls<V>>
-{
+export class ListControl<V = any> extends BaseControl<ListValue<V>> implements ParentControl<ListChildControls<V>> {
   get controls() {
     return this._controls;
   }
@@ -75,7 +72,7 @@ export class ListControl<V = any>
    * @param name
    * for list, we use index as name
    */
-  get = <C extends AbstractControl<any>>(name: string | number): C => {
+  get = <C extends BaseControl<any>>(name: string | number): C => {
     return this._controls[+name] as C;
   };
 

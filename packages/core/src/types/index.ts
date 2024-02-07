@@ -1,10 +1,10 @@
 import { Observable } from 'rxjs';
 
-import { AbstractControl } from '../controls/abstractControl';
+import { BaseControl } from '../controls/baseControl';
 import { GroupControl } from '../controls/groupControl';
 import { ListControl } from '../controls/listControl';
 
-export type AbstractControlSubset<V = any> = {
+export type AbstractControl<V = any> = {
   value: V;
   errors: Errors | null;
   valid: boolean;
@@ -31,17 +31,24 @@ export type AbstractControlSubset<V = any> = {
   validateAndUpdateErrors: () => void;
 };
 
+export interface ParentControl<CS = GroupChildControls | ListChildControls> extends AbstractControl {
+  readonly controls: CS;
+  readonly controlsChange: Observable<CS>;
+  get: (name: any) => BaseControl;
+  remove: (...params: any) => void;
+}
+
 export type GroupValue = {
   [key: string]: any;
 };
 
 export type GroupChildControls = {
-  [key: string]: AbstractControl<any>;
+  [key: string]: BaseControl<any>;
 };
 
 export type ListValue<V = any> = V[];
 
-export type ListChildControls<V = any> = AbstractControl<V>[];
+export type ListChildControls<V = any> = BaseControl<V>[];
 
 export type Errors = {
   [key: string]: any;
@@ -50,7 +57,7 @@ export type Errors = {
 // export type Valid = boolean | 'pending';
 export type Valid = boolean;
 
-export type ValidatorFn<V = any> = (control: AbstractControlSubset<V>) => Errors | null;
+export type ValidatorFn<V = any> = (control: BaseControl<V>) => Errors | null;
 
 export type ErrorMessageFactory = (errors: Errors | null) => string | undefined;
 
@@ -77,17 +84,10 @@ export type FormGroupOptions = ControlBasicOptions;
 
 export type FormListOptions = ControlBasicOptions;
 
-export type CreateControlParams<V = any> = AbstractControl<V> | [value?: V, options?: FormControlOptions];
+export type CreateControlParams<V = any> = BaseControl<V> | [value?: V, options?: FormControlOptions];
 
 export type FormGroupControlsConfig = {
   [key: string]: CreateControlParams;
 };
 
 export type FormListControlsConfig = CreateControlParams[];
-
-export interface ControlWithChildren<CS = GroupChildControls | ListChildControls> {
-  readonly controls: CS;
-  readonly controlsChange: Observable<CS>;
-  get: (name: any) => AbstractControl;
-  remove: (...params: any) => void;
-}

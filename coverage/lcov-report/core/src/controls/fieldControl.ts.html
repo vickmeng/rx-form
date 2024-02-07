@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -101,82 +101,82 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { FormControlOptions } from '../types';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >import { AbstractControl } from './abstractControl';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export class FieldControl&lt;V = any&gt; extends AbstractControl&lt;V&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  private readonly _initValue!: V;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  override _noError = () =&gt; !this.errors;</span>
-<span class="cstat-no" title="statement not covered" >  constructor(value: V, options: FormControlOptions = {}) {</span>
-<span class="cstat-no" title="statement not covered" >    super();</span>
-<span class="cstat-no" title="statement not covered" >    this._initValue = value;</span>
-<span class="cstat-no" title="statement not covered" >    this.initBasicParams(value, options);</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  override setValue = (value: V) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    /**</span>
-<span class="cstat-no" title="statement not covered" >     * start</span>
-<span class="cstat-no" title="statement not covered" >     * distinct value change</span>
-<span class="cstat-no" title="statement not covered" >     *</span>
-<span class="cstat-no" title="statement not covered" >     * decide to not put this logic in valueChange pipeline, two reason as below</span>
-<span class="cstat-no" title="statement not covered" >     * 1.cannot work when call setValue the first time</span>
-<span class="cstat-no" title="statement not covered" >     * 2.will trigger the diff fn in each subscribe place, it is redundant</span>
-<span class="cstat-no" title="statement not covered" >     *</span>
-<span class="cstat-no" title="statement not covered" >     * Same thing with errorsChange and validChange</span>
-<span class="cstat-no" title="statement not covered" >     */</span>
-<span class="cstat-no" title="statement not covered" >    if (value === this.value) {</span>
-<span class="cstat-no" title="statement not covered" >      return;</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >    /**</span>
-<span class="cstat-no" title="statement not covered" >     * end</span>
-<span class="cstat-no" title="statement not covered" >     */</span>
-<span class="cstat-no" title="statement not covered" >    this.valueSubject$.next(value);</span>
-<span class="cstat-no" title="statement not covered" >  };</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >  override reset = () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    this.setValue(this._initValue);</span>
-<span class="cstat-no" title="statement not covered" >  };</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { FormControlOptions } from '../types';
+&nbsp;
+import { BaseControl } from './baseControl';
+&nbsp;
+export class FieldControl&lt;V = any&gt; extends BaseControl&lt;V&gt; {
+  private readonly _initValue!: V;
+&nbsp;
+  override _noError = () =&gt; !this.errors;
+  constructor(value: V, options: FormControlOptions = {}) {
+    super();
+    this._initValue = value;
+    this.initBasicParams(value, options);
+  }
+&nbsp;
+  override setValue = (value: V) =&gt; {
+    /**
+     * start
+     * distinct value change
+     *
+     * decide to not put this logic in valueChange pipeline, two reason as below
+     * 1.cannot work when call setValue the first time
+     * 2.will trigger the diff fn in each subscribe place, it is redundant
+     *
+     * Same thing with errorsChange and validChange
+     */
+    if (value === this.value) {
+      return;
+    }
+    /**
+     * end
+     */
+    this.valueSubject$.next(value);
+  };
+&nbsp;
+  override reset = () =&gt; {
+    this.setValue(this._initValue);
+  };
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -184,7 +184,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-02-05T08:44:22.874Z
+                at 2024-02-07T02:03:18.806Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

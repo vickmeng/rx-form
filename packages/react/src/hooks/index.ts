@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { AbstractControl, GroupControl, ListControl, Errors } from '@yzw-rx-form/core';
+import { BaseControl, GroupControl, ListControl, Errors } from '@yzw-rx-form/core';
 
 const useUpdateEffect: typeof useEffect = (effect, deps) => {
   const isMounted = useRef(false);
@@ -19,10 +19,10 @@ const useUpdateEffect: typeof useEffect = (effect, deps) => {
  */
 function useControlValue(): undefined;
 // eslint-disable-next-line no-redeclare
-function useControlValue<C extends AbstractControl>(control: C): C['value'];
+function useControlValue<C extends BaseControl>(control: C): C['value'];
 
 // eslint-disable-next-line no-redeclare
-function useControlValue(control?: AbstractControl) {
+function useControlValue(control?: BaseControl) {
   const [value, setValue] = useState(control?.value);
 
   useEffect(() => {
@@ -47,9 +47,9 @@ function useControlValue(control?: AbstractControl) {
  */
 function useControlDisabled(): false;
 // eslint-disable-next-line no-redeclare
-function useControlDisabled(control: AbstractControl): boolean;
+function useControlDisabled(control: BaseControl): boolean;
 // eslint-disable-next-line no-redeclare
-function useControlDisabled(control?: AbstractControl): boolean {
+function useControlDisabled(control?: BaseControl): boolean {
   const [disabled, setDisabled] = useState<boolean>(!!control?.disabled);
 
   useEffect(() => {
@@ -74,9 +74,9 @@ function useControlDisabled(control?: AbstractControl): boolean {
  */
 function useControlDirty(): false;
 // eslint-disable-next-line no-redeclare
-function useControlDirty(control: AbstractControl): boolean;
+function useControlDirty(control: BaseControl): boolean;
 // eslint-disable-next-line no-redeclare
-function useControlDirty(control?: AbstractControl): boolean {
+function useControlDirty(control?: BaseControl): boolean {
   const [dirty, setDirty] = useState<boolean>(!!control?.dirty);
 
   useEffect(() => {
@@ -101,10 +101,10 @@ function useControlDirty(control?: AbstractControl): boolean {
  */
 function useControlValid(): false;
 // eslint-disable-next-line no-redeclare
-function useControlValid(control: AbstractControl): boolean;
+function useControlValid(control: BaseControl): boolean;
 // eslint-disable-next-line no-redeclare
-function useControlValid(control?: AbstractControl): AbstractControl['valid'] {
-  const [valid, setValid] = useState<AbstractControl['valid']>(control ? control?.valid : false);
+function useControlValid(control?: BaseControl): BaseControl['valid'] {
+  const [valid, setValid] = useState<BaseControl['valid']>(control ? control?.valid : false);
 
   useEffect(() => {
     const subscriber = control?.validChange.subscribe(setValid);
@@ -128,9 +128,9 @@ function useControlValid(control?: AbstractControl): AbstractControl['valid'] {
  */
 function useControlErrors(): null;
 // eslint-disable-next-line no-redeclare
-function useControlErrors(control: AbstractControl): Errors | null;
+function useControlErrors(control: BaseControl): Errors | null;
 // eslint-disable-next-line no-redeclare
-function useControlErrors(control?: AbstractControl): Errors | null {
+function useControlErrors(control?: BaseControl): Errors | null {
   const [errors, setErrors] = useState<Errors | null>(control?.errors || null);
 
   useEffect(() => {

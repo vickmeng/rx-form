@@ -285,7 +285,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { ReactElement } from 'react';</span></span></span>
 <span class="cstat-no" title="statement not covered" >import {</span>
-<span class="cstat-no" title="statement not covered" >  AbstractControl,</span>
+<span class="cstat-no" title="statement not covered" >  BaseControl,</span>
 <span class="cstat-no" title="statement not covered" >  FieldControl,</span>
 <span class="cstat-no" title="statement not covered" >  GroupControl,</span>
 <span class="cstat-no" title="statement not covered" >  ListControl,</span>
@@ -304,7 +304,7 @@
 <span class="cstat-no" title="statement not covered" >  name: string;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export interface ItemWithControlProps&lt;P, C extends AbstractControl&lt;any&gt;&gt; extends IItemBasicProps&lt;P&gt; {</span>
+<span class="cstat-no" title="statement not covered" >export interface ItemWithControlProps&lt;P, C extends BaseControl&lt;any&gt;&gt; extends IItemBasicProps&lt;P&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  control: C;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 <span class="cstat-no" title="statement not covered" ></span>
@@ -387,10 +387,10 @@
 <span class="cstat-no" title="statement not covered" >  valid: Valid;</span>
 <span class="cstat-no" title="statement not covered" >  dirty: boolean;</span>
 <span class="cstat-no" title="statement not covered" >  disabled: boolean;</span>
-<span class="cstat-no" title="statement not covered" >  control: AbstractControl&lt;any&gt;;</span>
+<span class="cstat-no" title="statement not covered" >  control: BaseControl&lt;any&gt;;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 <span class="cstat-no" title="statement not covered" >export type ErrorWithNameProps = ItemWithNameProps&lt;ErrorInternalProps&gt;;</span>
-<span class="cstat-no" title="statement not covered" >export type ErrorWithControlProps = ItemWithControlProps&lt;ErrorInternalProps, AbstractControl&gt;;</span>
+<span class="cstat-no" title="statement not covered" >export type ErrorWithControlProps = ItemWithControlProps&lt;ErrorInternalProps, BaseControl&gt;;</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export type ErrorProps = ErrorWithNameProps | ErrorWithControlProps;</span>
 &nbsp;</pre></td></tr></table></pre>

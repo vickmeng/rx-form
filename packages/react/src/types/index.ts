@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import {
-  AbstractControl,
+  BaseControl,
   FieldControl,
   GroupControl,
   ListControl,
@@ -19,7 +19,7 @@ export interface ItemWithNameProps<P> extends ItemBasicProps<P> {
   name: string;
 }
 
-export interface ItemWithControlProps<P, C extends AbstractControl<any>> extends ItemBasicProps<P> {
+export interface ItemWithControlProps<P, C extends BaseControl<any>> extends ItemBasicProps<P> {
   control: C;
 }
 
@@ -101,9 +101,9 @@ export interface ErrorInternalProps {
   valid: Valid;
   dirty: boolean;
   disabled: boolean;
-  control: AbstractControl<any>;
+  control: BaseControl<any>;
 }
 export type ErrorWithNameProps = ItemWithNameProps<ErrorInternalProps>;
-export type ErrorWithControlProps = ItemWithControlProps<ErrorInternalProps, AbstractControl>;
+export type ErrorWithControlProps = ItemWithControlProps<ErrorInternalProps, BaseControl>;
 
 export type ErrorProps = ErrorWithNameProps | ErrorWithControlProps;

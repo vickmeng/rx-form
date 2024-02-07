@@ -1,8 +1,8 @@
 import { FormControlOptions } from '../types';
 
-import { AbstractControl } from './abstractControl';
+import { BaseControl } from './baseControl';
 
-export class FieldControl<V = any> extends AbstractControl<V> {
+export class FieldControl<V = any> extends BaseControl<V> {
   private readonly _initValue!: V;
 
   override _noError = () => !this.errors;

@@ -175,19 +175,19 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { Observable } from 'rxjs';</span></span></span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >import { AbstractControl } from '../controls/abstractControl';</span>
+<span class="cstat-no" title="statement not covered" >import { BaseControl } from '../controls/abstractControl';</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export type GroupValue = {</span>
 <span class="cstat-no" title="statement not covered" >  [key: string]: any;</span>
 <span class="cstat-no" title="statement not covered" >};</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export type GroupChildControls = {</span>
-<span class="cstat-no" title="statement not covered" >  [key: string]: AbstractControl&lt;any&gt;;</span>
+<span class="cstat-no" title="statement not covered" >  [key: string]: BaseControl&lt;any&gt;;</span>
 <span class="cstat-no" title="statement not covered" >};</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export type ListValue&lt;V = any&gt; = V[];</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export type ListChildControls&lt;V = any&gt; = AbstractControl&lt;V&gt;[];</span>
+<span class="cstat-no" title="statement not covered" >export type ListChildControls&lt;V = any&gt; = BaseControl&lt;V&gt;[];</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export type Errors = {</span>
 <span class="cstat-no" title="statement not covered" >  [key: string]: any;</span>
@@ -195,8 +195,8 @@
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export type Valid = boolean | 'pending';</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export type ValidatorFn&lt;V = any&gt; = (control: AbstractControl&lt;V&gt;) =&gt; Errors | null;</span>
-<span class="cstat-no" title="statement not covered" >export type AsyncValidatorFn&lt;V = any&gt; = (control: AbstractControl&lt;V&gt;) =&gt; Promise&lt;Errors | null&gt;;</span>
+<span class="cstat-no" title="statement not covered" >export type ValidatorFn&lt;V = any&gt; = (control: BaseControl&lt;V&gt;) =&gt; Errors | null;</span>
+<span class="cstat-no" title="statement not covered" >export type AsyncValidatorFn&lt;V = any&gt; = (control: BaseControl&lt;V&gt;) =&gt; Promise&lt;Errors | null&gt;;</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export interface ControlBasicOptions {</span>
 <span class="cstat-no" title="statement not covered" >  disabled?: boolean;</span>
@@ -214,7 +214,7 @@
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export type FormListOptions = ControlBasicOptions;</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export type CreateControlParams&lt;V = any&gt; = AbstractControl&lt;V&gt; | [value?: V, options?: FormControlOptions];</span>
+<span class="cstat-no" title="statement not covered" >export type CreateControlParams&lt;V = any&gt; = BaseControl&lt;V&gt; | [value?: V, options?: FormControlOptions];</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >export type FormGroupControlsConfig = {</span>
 <span class="cstat-no" title="statement not covered" >  [key: string]: CreateControlParams;</span>
@@ -225,7 +225,7 @@
 <span class="cstat-no" title="statement not covered" >export interface ControlWithChildren&lt;CS = GroupChildControls | ListChildControls&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  readonly controls: CS;</span>
 <span class="cstat-no" title="statement not covered" >  readonly controlsChange: Observable&lt;CS&gt;;</span>
-<span class="cstat-no" title="statement not covered" >  get: (name: any) =&gt; AbstractControl;</span>
+<span class="cstat-no" title="statement not covered" >  get: (name: any) =&gt; BaseControl;</span>
 <span class="cstat-no" title="statement not covered" >  remove: (...params: any) =&gt; void;</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;</pre></td></tr></table></pre>

@@ -192,10 +192,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { isEmpty } from 'lodash';
 &nbsp;
 import { CreateControlParams, Errors, ValidatorFn } from '../types';
-import { AbstractControl } from '../controls/abstractControl';
+import { BaseControl } from '../controls/abstractControl';
 import { FieldControl } from '../controls/fieldControl';
 &nbsp;
-export const getErrorsBy = (control: AbstractControl, validators: ValidatorFn[]) =&gt; {
+export const getErrorsBy = (control: BaseControl, validators: ValidatorFn[]) =&gt; {
   const errors: Errors = validators.reduce((acc, cur) =&gt; {
     const error = cur(control);
     if (error) {
@@ -212,7 +212,7 @@ export const getErrorsBy = (control: AbstractControl, validators: ValidatorFn[])
  * Accept the Control instance as input and return it itself; otherwise, accept the parameters to construct a FieldControl and return the constructed FieldControl
  */
 export const createControl = (params: CreateControlParams) =&gt; {
-  if (params instanceof AbstractControl) {
+  if (params instanceof BaseControl) {
     return params;
   } else {
     return new FieldControl(...params);
@@ -222,10 +222,10 @@ export const createControl = (params: CreateControlParams) =&gt; {
  * 深度递归深度寻找control以及其子control的第一个有error的control
  */
 // @ts-ignore
-export const deepCheckFirstInvalidControl = (controls: AbstractControl[]) =&gt; {
+export const deepCheckFirstInvalidControl = (controls: BaseControl[]) =&gt; {
   let res;
 &nbsp;
-  const loop = (_controls: AbstractControl[]) =&gt; {
+  const loop = (_controls: BaseControl[]) =&gt; {
     _controls.find((_control) =&gt; {
       if (!isEmpty(_control.errors)) {
         res = _control;
@@ -244,7 +244,7 @@ export const deepCheckFirstInvalidControl = (controls: AbstractControl[]) =&gt; 
         // 这里只能是GroupControl
         // TODO 引入GroupControl就报错
         // @ts-ignore
-        return loop(Object.values(_control.controls as AbstractControl[]));
+        return loop(Object.values(_control.controls as BaseControl[]));
       }
     });
   };

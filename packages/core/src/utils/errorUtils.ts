@@ -1,8 +1,9 @@
 import { isEmpty } from 'lodash';
 
-import { AbstractControlSubset, Errors, ValidatorFn } from '../types';
+import { Errors, ValidatorFn } from '../types';
+import { BaseControl } from '../controls/baseControl';
 
-export const getErrorsBy = <V = any>(control: AbstractControlSubset<V>, validators: ValidatorFn[]) => {
+export const getErrorsBy = <V = any>(control: BaseControl<V>, validators: ValidatorFn[]) => {
   const errors: Errors = validators.reduce((acc, cur) => {
     const error = cur(control);
     if (error) {
