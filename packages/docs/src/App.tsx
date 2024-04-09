@@ -25,7 +25,7 @@ import FieldControlApiPage from './pages/api/FieldControl';
 import PlayGroundPage from './pages/playGround';
 import GroupControlApiPage from './pages/api/GroupControl';
 import ListControlApiPage from './pages/api/ListControl';
-import AsyncValidatePage from './pages/advance/asyncValidate';
+// import AsyncValidatePage from './pages/advance/asyncValidate';
 
 function App() {
   const location = useLocation();
@@ -50,7 +50,7 @@ function App() {
           <Route path="/resources" component={ResourcesPage} />
           <Route path="/uniteValidate" component={UniteValidatePage} />
           <Route path="/nest" component={NestPage} />
-          <Route path="/asyncValidate" component={AsyncValidatePage} />
+          {/* <Route path="/asyncValidate" component={AsyncValidatePage} /> */}
           <Route path="/useRx" component={UseRxPage} />
 
           <Route path="/fieldApi" component={FieldApiPage} />
