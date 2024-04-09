@@ -79,7 +79,7 @@ export interface ControlBasicOptions {
   disabled?: boolean;
   autoValidate?: boolean;
   validators?: ValidatorFn[];
-  autoAsyncValidate?: boolean;
+  // autoAsyncValidate?: boolean;
   // asyncValidators?: AsyncValidatorFn[];
   dirty?: boolean;
   autoMarkAsDirty?: boolean;
