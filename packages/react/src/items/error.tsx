@@ -1,8 +1,8 @@
 import { useContext } from 'react';
-import { GroupControl } from '@yzw-rx-form/core';
+import { BaseControl, GroupControl } from '@yzw-rx-form/core';
 
 import { ErrorInternalProps, ErrorProps } from '../types';
-import { isErrorWithNameProps } from '../utils';
+import { __throwRxFormReactError, isErrorWithNameProps } from '../utils';
 import { useControlDirty, useControlDisabled, useControlErrors, useControlValid } from '../hooks';
 
 import { ParentFormContext } from './context';
@@ -15,6 +15,10 @@ export const Error = (props: ErrorProps) => {
   const { name = undefined, control } = isErrorWithNameProps(props)
     ? { name: props.name, control: parentGroup!.get<GroupControl>(props.name) }
     : { control: props.control };
+
+  if (!(control instanceof BaseControl)) {
+    __throwRxFormReactError(`Error组件控制器绑定错误，当前name为${name}`);
+  }
 
   const disabled = useControlDisabled(control);
   const dirty = useControlDirty(control);

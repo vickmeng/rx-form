@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { GroupControl, GroupValue } from '@yzw-rx-form/core';
 
 import { GroupInternalProps, GroupProps } from '../types';
-import { isGroupWithNameProps } from '../utils';
+import { __throwRxFormReactError, isGroupWithNameProps } from '../utils';
 import { useControlControls, useControlDisabled } from '../hooks';
 
 import { ParentFormContext } from './context';
@@ -17,8 +17,9 @@ export const Group = <V extends GroupValue = any>(props: GroupProps<V>) => {
     : { control: props.control };
 
   if (!(control instanceof GroupControl)) {
-    throw new Error('props error:Group can only receive GroupControl as control');
+    __throwRxFormReactError(`Group组件控制器绑定错误，当前name为${name}`);
   }
+
   const disabled = useControlDisabled(control);
   const controls = useControlControls<GroupControl<V>>(control);
 

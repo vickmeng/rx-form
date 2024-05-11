@@ -26,3 +26,7 @@ export const isListWithNameProps = <V>(props: ListProps<V>): props is ListWithNa
 export function isErrorWithNameProps(props: ErrorProps): props is ErrorWithNameProps {
   return (props as ErrorWithNameProps).name !== undefined;
 }
+
+export const __throwRxFormReactError = (msg: string) => {
+  throw new Error(`rx-form错误：${msg}`);
+};

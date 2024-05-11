@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { ListControl } from '@yzw-rx-form/core';
+import { GroupControl, ListControl } from '@yzw-rx-form/core';
 
-import { isListWithNameProps } from '../utils';
+import { __throwRxFormReactError, isListWithNameProps } from '../utils';
 import { ListInternalProps, ListProps } from '../types';
 import { useControlControls, useControlDisabled } from '../hooks';
 
@@ -17,7 +17,7 @@ export const List = <V,>(props: ListProps<V>) => {
     : { control: props.control };
 
   if (!(control instanceof ListControl)) {
-    throw new Error('props error:List can only receive ListControl as control');
+    __throwRxFormReactError(`List组件控制器绑定错误，当前name为${name}`);
   }
 
   const disabled = useControlDisabled(control);

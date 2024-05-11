@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { FieldControl } from '@yzw-rx-form/core';
 
 import { FieldInternalProps, FieldProps } from '../types';
-import { isFieldWithNameProps } from '../utils';
+import { __throwRxFormReactError, isFieldWithNameProps } from '../utils';
 import { useControlDirty, useControlDisabled, useControlErrors, useControlValid, useControlValue } from '../hooks';
 
 import { ParentFormContext } from './context';
@@ -20,7 +20,7 @@ export function Field<V>(props: FieldProps<V>) {
     : { control: props.control };
 
   if (!(control instanceof FieldControl)) {
-    throw new Error('props error:Field can only receive FieldControl as control');
+    __throwRxFormReactError(`Field组件控制器绑定错误，当前name为${name}`);
   }
 
   const value = useControlValue<FieldControl<V>>(control);
