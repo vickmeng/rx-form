@@ -1,6 +1,6 @@
 {
   "name": "@yzw-rx-form/react",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "core",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,11 +16,11 @@
   "author": "laomeng",
   "license": "ISC",
   "peerDependencies": {
-    "react": "*",
-    "@yzw-rx-form/core": "workspace:*"
+    "@yzw-rx-form/core": "workspace:*",
+    "react": "*"
   },
   "devDependencies": {
-    "react": "*",
-    "@yzw-rx-form/core": "workspace:*"
+    "@yzw-rx-form/core": "workspace:*",
+    "react": "*"
   }
 }
