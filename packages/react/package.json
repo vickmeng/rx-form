@@ -15,11 +15,7 @@
   },
   "author": "laomeng",
   "license": "ISC",
-  "peerDependencies": {
-    "@yzw-rx-form/core": "workspace:*",
-    "react": "*"
-  },
-  "devDependencies": {
+  "dependencies": {
     "@yzw-rx-form/core": "workspace:*",
     "react": "*"
   }
