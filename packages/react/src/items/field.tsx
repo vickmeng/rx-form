@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { FieldControl } from '@yzw-rx-form/core';
+import { FieldControl } from '@rx-form/core';
 
 import { FieldInternalProps, FieldProps } from '../types';
 import { __throwRxFormReactError, isFieldWithNameProps } from '../utils';

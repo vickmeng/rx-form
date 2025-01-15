@@ -9,7 +9,7 @@ import {
   ListChildControls,
   Valid,
   GroupValue,
-} from '@yzw-rx-form/core';
+} from '@rx-form/core';
 
 export interface ItemBasicProps<P> {
   children: (props: P) => ReactElement;

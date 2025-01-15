@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { GroupControl } from '@yzw-rx-form/core';
+import { GroupControl } from '@rx-form/core';
 
 import { Field, Group } from '../index';
 

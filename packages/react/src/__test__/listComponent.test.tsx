@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { ListControl } from '@yzw-rx-form/core';
+import { ListControl } from '@rx-form/core';
 
 import { Field, List } from '../index';
 

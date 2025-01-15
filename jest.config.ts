@@ -89,7 +89,7 @@ export default {
   moduleNameMapper: {
     // '@/*': '<rootDir>/src',
     // '@/(.*)$': '<rootDir>/src/$1',
-    '@yzw-rx-form/core': '<rootDir>/packages/core/src',
+    '@rx-form/core': '<rootDir>/packages/core/src',
   },
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],

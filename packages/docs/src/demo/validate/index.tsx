@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { TextField, FormHelperText } from '@material-ui/core';
-import { Field, Error } from '@yzw-rx-form/react';
-import { FieldControl, maxLengthValidator, requiredValidator } from '@yzw-rx-form/core';
+import { Field, Error } from '@rx-form/react';
+import { FieldControl, maxLengthValidator, requiredValidator } from '@rx-form/core';
 
 export const ValidateDemo = () => {
   const controlRef = useRef(

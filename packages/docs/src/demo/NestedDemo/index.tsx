@@ -12,8 +12,8 @@ import {
   TextField,
   Typography,
 } from '@material-ui/core';
-import { Field, Group, List, Error } from '@yzw-rx-form/react';
-import { GroupControl, ListControl, requiredValidator } from '@yzw-rx-form/core';
+import { Field, Group, List, Error } from '@rx-form/react';
+import { GroupControl, ListControl, requiredValidator } from '@rx-form/core';
 
 const createFamilyMemberGroup = () => {
   return new GroupControl({

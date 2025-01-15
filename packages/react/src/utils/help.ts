@@ -1,4 +1,4 @@
-import { GroupValue } from '@yzw-rx-form/core';
+import { GroupValue } from '@rx-form/core';
 
 import {
   ErrorProps,

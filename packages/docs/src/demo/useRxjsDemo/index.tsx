@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { TextField } from '@material-ui/core';
 import { debounceTime } from 'rxjs/operators';
-import { Field } from '@yzw-rx-form/react';
-import { FieldControl } from '@yzw-rx-form/core';
+import { Field } from '@rx-form/react';
+import { FieldControl } from '@rx-form/core';
 
 const UseRxjsDemo = () => {
   const controlRef = useRef(new FieldControl<string>(''));

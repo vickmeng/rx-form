@@ -1,7 +1,7 @@
 import React from 'react';
 import { Input } from 'antd';
-import { Field } from '@yzw-rx-form/react';
-import { FieldControl } from '@yzw-rx-form/core';
+import { Field } from '@rx-form/react';
+import { FieldControl } from '@rx-form/core';
 
 const formControl = new FieldControl<string>('vick');
 

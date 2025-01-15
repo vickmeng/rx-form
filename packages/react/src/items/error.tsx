@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { BaseControl, GroupControl } from '@yzw-rx-form/core';
+import { BaseControl, GroupControl } from '@rx-form/core';
 
 import { ErrorInternalProps, ErrorProps } from '../types';
 import { __throwRxFormReactError, isErrorWithNameProps } from '../utils';

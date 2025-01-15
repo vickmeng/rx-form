@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { BaseControl, GroupControl, ListControl, Errors } from '@yzw-rx-form/core';
+import { BaseControl, GroupControl, ListControl, Errors } from '@rx-form/core';
 
 const useUpdateEffect: typeof useEffect = (effect, deps) => {
   const isMounted = useRef(false);

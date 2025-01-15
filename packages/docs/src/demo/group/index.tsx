@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Button, TextField } from '@material-ui/core';
-import { Field, Group } from '@yzw-rx-form/react';
-import { GroupControl } from '@yzw-rx-form/core';
+import { Field, Group } from '@rx-form/react';
+import { GroupControl } from '@rx-form/core';
 
 // import { Field, Group, GroupControl } from "../../../packages/index";
 

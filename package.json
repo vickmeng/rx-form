@@ -1,5 +1,5 @@
 {
-  "name": "yzw-rx-form",
+  "name": "rx-form",
   "version": "2.0.0",
   "description": "",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "npmClient": "pnpm",
   "keywords": [],
-  "license": "ISC",
+  "license": "MIT",
   "author": "laomeng",
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.0.0",

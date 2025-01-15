@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { GroupControl, GroupValue } from '@yzw-rx-form/core';
+import { GroupControl, GroupValue } from '@rx-form/core';
 
 import { GroupInternalProps, GroupProps } from '../types';
 import { __throwRxFormReactError, isGroupWithNameProps } from '../utils';

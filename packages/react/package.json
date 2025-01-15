@@ -1,6 +1,6 @@
 {
-  "name": "@yzw-rx-form/react",
-  "version": "2.1.1",
+  "name": "@rx-form/react",
+  "version": "2.0.0",
   "description": "react",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,10 +13,13 @@
     "build": "rollup -c",
     "watch": "rollup -c --watch"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "laomeng",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@yzw-rx-form/core": "workspace:*",
+    "@rx-form/core": "workspace:*",
     "react": "*"
   }
 }

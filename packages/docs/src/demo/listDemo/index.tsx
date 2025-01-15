@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { Avatar, Button, TextField } from '@material-ui/core';
 import './index.less';
-import { Field, List } from '@yzw-rx-form/react';
-import { ListControl } from '@yzw-rx-form/core';
+import { Field, List } from '@rx-form/react';
+import { ListControl } from '@rx-form/core';
 
 const ListDemo = () => {
   const myControl = useRef(new ListControl([['Vick'], ['Tom'], ['Jack'], ['Lulu']])).current;

@@ -19,7 +19,7 @@ const QuickStart = () => {
       </Typography>
 
       <SyntaxHighlighter language="javascript" style={atomOneLight}>
-        yarn add rxjs @yzw-rx-form/core @yzw-rx-form/react
+        yarn add rxjs @rx-form/core @rx-form/react
       </SyntaxHighlighter>
     </div>
   );

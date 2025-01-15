@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { GroupControl, ListControl } from '@yzw-rx-form/core';
+import { GroupControl, ListControl } from '@rx-form/core';
 
 import { __throwRxFormReactError, isListWithNameProps } from '../utils';
 import { ListInternalProps, ListProps } from '../types';

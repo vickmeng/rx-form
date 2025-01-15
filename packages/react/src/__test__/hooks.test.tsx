@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react';
-import { FieldControl, BaseControl, requiredValidator, GroupControl } from '@yzw-rx-form/core';
+import { FieldControl, BaseControl, requiredValidator, GroupControl } from '@rx-form/core';
 
 import {
   // useControlAsyncErrors,

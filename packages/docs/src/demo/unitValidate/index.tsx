@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextField, FormHelperText } from '@material-ui/core';
-import { Field, Group, Error, ErrorInternalProps } from '@yzw-rx-form/react';
-import { ValidatorFn, GroupControl, requiredValidator } from '@yzw-rx-form/core';
+import { Field, Group, Error, ErrorInternalProps } from '@rx-form/react';
+import { ValidatorFn, GroupControl, requiredValidator } from '@rx-form/core';
 
 interface FormValue {
   passWord: string;

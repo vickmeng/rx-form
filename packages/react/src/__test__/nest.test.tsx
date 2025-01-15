@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { GroupControl, ListControl, requiredValidator } from '@yzw-rx-form/core';
+import { GroupControl, ListControl, requiredValidator } from '@rx-form/core';
 
 import { Field, Group, Error, List } from '../index';
 

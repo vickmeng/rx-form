@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { requiredValidator, FieldControl } from '@yzw-rx-form/core';
+import { requiredValidator, FieldControl } from '@rx-form/core';
 
 import { Error } from '../index';
 
