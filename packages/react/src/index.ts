@@ -10,8 +10,8 @@ export type { FieldInternalProps, GroupInternalProps, ListInternalProps, ErrorIn
 
 export {
   useControlValue,
-  useControlDisabled,
   useControlDirty,
+  useControlDisabled,
   useControlValid,
   useControlErrors,
   useControlControls,

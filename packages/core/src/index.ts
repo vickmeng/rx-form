@@ -2,10 +2,10 @@
  * Controls
  */
 
+export { BaseControl } from './controls/baseControl';
 export { FieldControl } from './controls/fieldControl';
 export { GroupControl } from './controls/groupControl';
 export { ListControl } from './controls/listControl';
-export { BaseControl } from './controls/baseControl';
 
 export type {
   FormControlOptions,

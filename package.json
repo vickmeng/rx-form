@@ -4,16 +4,22 @@
   "description": "",
   "scripts": {
     "test": "jest",
-    "test:c": "pnpm run test --coverage"
+    "test:c": "pnpm run test --coverage",
+    "p": "lerna publish"
   },
   "npmClient": "pnpm",
   "keywords": [],
   "license": "ISC",
   "author": "laomeng",
   "devDependencies": {
-    "rollup": "2.79.0",
     "@rollup/plugin-typescript": "^11.0.0",
-    "tslib": "^2.5.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.2",
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
     "eslint": "^8.34.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-standard": "^17.0.0",
@@ -25,21 +31,18 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sort-class-members": "^1.17.1",
-    "prettier": "^2.8.4",
-    "typescript": "^4.1.2",
-    "@typescript-eslint/eslint-plugin": "^5.53.0",
-    "@typescript-eslint/parser": "^5.53.0",
     "jest": "^29.5.0",
     "jest-environment-jsdom": "^29.5.0",
     "jest-transform-stub": "^2.0.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
-    "@types/jest": "^29.5.1",
-    "@types/node": "^18.16.2",
+    "lerna": "^8.1.9",
+    "prettier": "^2.8.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "2.79.0",
     "ts-jest": "^29.1.0",
     "ts-node": "^10.9.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+    "tslib": "^2.5.0",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {}
 }
