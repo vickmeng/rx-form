@@ -1,6 +1,6 @@
 {
   "name": "@yzw-rx-form/core",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "core",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,9 +18,5 @@
   "dependencies": {
     "lodash": "^4.0.0",
     "rxjs": "*"
-  },
-  "peerDependencies": {
-  },
-  "devDependencies": {
   }
 }
