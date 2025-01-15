@@ -1,6 +1,7 @@
 node_modules
 **/node_modules/
-dist
-**/dist/
+#dist
+packages/core/dist/
+packages/react/dist/
 .swc
 .idea/
