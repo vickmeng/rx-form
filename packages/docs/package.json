@@ -1,20 +1,20 @@
 {
   "name": "docs",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "@yzw-rx-form/core": "workspace:*",
     "@yzw-rx-form/react": "workspace:*",
     "antd": "^5",
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^5.2.0",
     "react-syntax-highlighter": "^15.4.4",
     "rxjs": "^7.1.0"
@@ -23,7 +23,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
-    "vite": "^4.3.2",
-    "less": "^4.1.3"
+    "less": "^4.1.3",
+    "vite": "^4.3.2"
   }
 }
