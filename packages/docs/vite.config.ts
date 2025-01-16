@@ -8,7 +8,6 @@ export default defineConfig({
     outDir: '../../docs', // 将此路径修改为你想要的输出目录
   },
   base: 'rx-form',
-
   // preprocessorOptions: {
   //   less: {
   //     math: 'parens-division',
