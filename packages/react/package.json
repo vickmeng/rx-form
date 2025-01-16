@@ -1,6 +1,6 @@
 {
   "name": "@rx-form/react",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "react",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
   "author": "laomeng",
   "license": "MIT",
   "dependencies": {
-    "@rx-form/core": "^2.2.0",
+    "@rx-form/core": "^2.3.0",
     "react": "*"
   },
   "gitHead": "2328c92b900a7879b10c593feb6a7284e6b0a35b"
