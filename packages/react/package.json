@@ -19,7 +19,8 @@
   "author": "laomeng",
   "license": "MIT",
   "dependencies": {
-    "@rx-form/core": "workspace:*",
+    "@rx-form/core": "2.2.0",
     "react": "*"
-  }
+  },
+  "gitHead": "af91c479753cee37e6f25b2d9167a3615c9b5f61"
 }
