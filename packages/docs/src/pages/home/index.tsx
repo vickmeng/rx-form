@@ -2,15 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import GitHubIcon from '@material-ui/icons/GitHub';
+
 
 import { BasicWithAntd, BasicWithMui } from '../../demo/basic';
 import UseRxjsDemo from '../../demo/useRxjsDemo';
 import flowImg from '../../assets/img/flow.png';
 import reactImg from '../../assets/img/react.svg';
 import rxImg from '../../assets/img/rx.png';
+import githubImg from '../../assets/img/github-fill.svg';
 
 import './index.less';
+import {Space} from "antd";
 
 const Home = () => {
   return (
@@ -20,14 +22,18 @@ const Home = () => {
         <img src={reactImg} className={'reactImg'} />
 
         <nav>
-          <div>
+          <Space>
             <Link className="link" to="/quick-start">
               文档
             </Link>
             <a className="link" href="https://github.com/RxJS-CN" target="_blank" rel="noreferrer">
               RxJS 中文社区
             </a>
-          </div>
+
+            <a className="link" href="https://github.com/vickmeng/rx-form/tree/main" target="_blank" rel="noreferrer">
+              <img src={githubImg} />
+            </a>
+          </Space>
           <div>
             {/* <a href="https://github.com/vickmeng/react-observable-form"> */}
             {/*  <GitHubIcon /> */}
