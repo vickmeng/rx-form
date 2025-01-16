@@ -162,8 +162,8 @@ importers:
   packages/react:
     dependencies:
       '@rx-form/core':
-        specifier: workspace:*
-        version: link:../core
+        specifier: ^2.0.0
+        version: 2.1.0
       react:
         specifier: '*'
         version: 18.3.1
@@ -2131,6 +2131,14 @@ packages:
     resolution:
       { integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g== }
     dev: true
+
+  /@rx-form/core@2.1.0:
+    resolution:
+      { integrity: sha512-ttxut7/xGhK0XwsKu0965stKYFuG6MfyrLq5KUqcyhMiQzUs6/MSLmIlzA7XDOAnLi16UjxQKZV4JrAcdKWWow== }
+    dependencies:
+      lodash: 4.17.21
+      rxjs: 7.8.1
+    dev: false
 
   /@sigstore/bundle@2.3.2:
     resolution:
